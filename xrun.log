@@ -1,6 +1,6 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
 xrun: *W,FMDEF: The default file type mapping of .sv is being overwritten.
-TOOL:	xrun(64)	20.09-s001: Started on Mar 21, 2025 at 05:05:59 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Mar 21, 2025 at 23:12:29 EDT
 xrun
 	+xm64bit
 	-sv
@@ -19,11 +19,11 @@ xrun
 	01_tb/tb_modular_multiplication.sv
 	-timescale 1ns/10ps
 	+access+rcw
-Recompiling... reason: file './00_src/mont_final.sv' is newer than expected.
-	expected: Fri Mar 21 01:30:56 2025
-	actual:   Fri Mar 21 03:25:56 2025
-file: 00_src/modular_multiplication.sv
-	module worklib.modular_multiplication:sv
+Recompiling... reason: file './00_src/ECPA.sv' is newer than expected.
+	expected: Fri Mar 21 23:11:20 2025
+	actual:   Fri Mar 21 23:12:26 2025
+file: 00_src/ECPA.sv
+	module worklib.ECPA:sv
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
@@ -31,17 +31,50 @@ file: 00_src/modular_multiplication.sv
 		ECPA
 		tb_modular_multiplication
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-        .b(Z2_CUBE),
-                 |
-xmelab: *W,CUVMPW (./00_src/ECPA.sv,138|17): port sizes differ in port connection(1/256) for the instance(ECPA) .
-        .b(Z1_CUBE),
-                 |
-xmelab: *W,CUVMPW (./00_src/ECPA.sv,149|17): port sizes differ in port connection(1/256) for the instance(ECPA) .
-        .ready(done_Z1_SQ)
-             |
-xmelab: *E,MULDRN (./00_src/ECPA.sv,52|13): Variable 'ECPA.done_Z1_SQ' has multiple conflicting drivers and the indicated output port connection in scope 'ECPA' is contributing to this conflict set.
-        .ready(done_Z1_SQ)
-             |
-xmelab: *E,MULDRN (./00_src/ECPA.sv,63|13): Variable 'ECPA.done_Z1_SQ' has multiple conflicting drivers and the indicated output port connection in scope 'ECPA' is contributing to this conflict set.
-xrun: *E,ELBERR: Error during elaboration (status 1), exiting.
-TOOL:	xrun(64)	20.09-s001: Exiting on Mar 21, 2025 at 05:06:01 EDT  (total: 00:00:02)
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.modular_multiplication:sv <0x257d80d6>
+			streams:  19, words:  7831
+		worklib.tb_modular_multiplication:sv <0x53f828fd>
+			streams:   8, words:  6004
+		worklib.modular_addition:sv <0x5227f245>
+			streams:   7, words:  4739
+		worklib.BK256:sv <0x48e99a61>
+			streams:  71, words: 28400
+		worklib.pg16:sv <0x6c209284>
+			streams:   0, words:     0
+		worklib.BrentKung:sv <0x3c16aeae>
+			streams:   0, words:     0
+		worklib.BK256:sv <0x64b2ebf3>
+			streams:  71, words: 28589
+		worklib.modular_subtractor:sv <0x4b378877>
+			streams:   7, words:  4790
+		worklib.modular_multiplication:sv <0x268ef3b0>
+			streams:  19, words:  8067
+		worklib.ECPA:sv <0x49b3e4d3>
+			streams:  88, words: 29300
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                4834      11
+		Primitives:            18080       3
+		Registers:               434     103
+		Scalar wires:            743       -
+		Expanded wires:        11776    2736
+		Vectored wires:          200       -
+		Always blocks:           203      25
+		Initial blocks:            1       1
+		Cont. assignments:       198      51
+		Pseudo assignments:      561     174
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.ECPA:sv
+Loading snapshot worklib.ECPA:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Test Case 1: p = 19d2498cd03177fac03beeb705c97a722a308c2e77a0c0cdfd08374defa2386a
+Simulation complete via $finish(1) at time 2685 NS + 0
+./01_tb/tb_modular_multiplication.sv:53         $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Mar 21, 2025 at 23:12:32 EDT  (total: 00:00:03)

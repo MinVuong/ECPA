@@ -1,0 +1,15 @@
+
+các bước push code 
+Bước 1:add . là add tất cả các file thay đổi. (có thể Ignore các file thư mục nặng trong file gitIgnore)
+    git add .
+
+Bước 2: mô tả trong dấu nháy nha. để sau này có thể xem lịch sử thay đổi ở commit trên git
+    git commit -m "Mô tả những thay đổi của lần push này lên"
+
+Bước 3: main là nhánh mình push lên. có thể xem nhánh hiện tại bằng lênh git branch 
+    git push -u origin main
+    
+hoặc: git push
+
+
+(sau lần push đầu thì có thể rút gọn thành "git push")

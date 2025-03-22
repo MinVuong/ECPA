@@ -1,0 +1,7 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(21Mar2025:23:06:17):( xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw )
+s2::(21Mar2025:23:11:23):( xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw )
+s3::(21Mar2025:23:12:29):( xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw )

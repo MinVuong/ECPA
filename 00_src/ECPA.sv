@@ -60,7 +60,7 @@ modular_multiplication mult12 (
         .b(Z2),
         .m(p),
         .p(Z2_SQ),
-        .ready(done_Z1_SQ)
+        .ready(done_Z2_SQ)
     );
   assign done_stage1 = done_Z1_SQ&done_Z2_SQ&done_Z1_Z2;
 
@@ -135,7 +135,7 @@ modular_multiplication mult23 (
         .rst_n(i_rst_n),
         .start(start_stage3),
         .a(Y1),
-        .b(Z2_CUBE),
+        .b(Z2_cube),
         .m(p),
         .p(S1),
         .ready(done_S1)
@@ -146,7 +146,7 @@ modular_multiplication mult31 (
         .rst_n(i_rst_n),
         .start(start_stage3),
         .a(Y2),
-        .b(Z1_CUBE),
+        .b(Z1_cube),
         .m(p),
         .p(S2),
         .ready(done_S2)
