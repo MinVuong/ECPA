@@ -1,0 +1,14 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++xm64bit
+-sv
+-vlogext
+.sv
+-f
+00_src/flist.f
+01_tb/tb_modular_multiplication.sv
+-timescale
+1ns/10ps
++access+rcw

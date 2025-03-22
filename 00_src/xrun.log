@@ -1,0 +1,32 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on May 22, 2024 at 03:48:22 EDT
+xrun
+	-gui
+	-f list_decode.f
+		inv_key_exp.sv
+		inv_add_rcon.sv
+		InvMixColumns.sv
+		inv_sbox.sv
+		decipher_core.sv
+		decipher_top.sv
+		register.sv
+		sbox.sv
+		tb_decipher_top.sv
+	+access+rcw
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_decipher_top.cipher_text tb_decipher_top.clk_sys tb_decipher_top.decipher_complete tb_decipher_top.decipher_en tb_decipher_top.decipher_ready tb_decipher_top.inv_round_key_out tb_decipher_top.plain_text tb_decipher_top.round_key_10 tb_decipher_top.rst_n
+Created probe 1
+xcelium> run
+Simulation stopped via $stop(1) at time 156 NS + 0
+xcelium> ^C
+xcelium> exit
+...Regained control from SimVision
+-------------------------------------
+TOOL:	xrun(64)	20.09-s001: Exiting on May 22, 2024 at 03:49:36 EDT  (total: 00:01:14)

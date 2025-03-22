@@ -1,0 +1,160 @@
+*** Message Type: info ***
+When: Sun Mar 16 08:22:47 EDT 2025
+SimVision started.
+Version: TOOL:  simvision(64)   20.09-s001
+User: admin
+Host: centos7
+Platform: Linux/x86_64/3.10.0-1160.108.1.el7.x86_64
+Started: Sun Mar 16 08:22:47 EDT 2025
+Command: /opt/cadence/XCELIUM2009/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:centos7:35295 -64BIT -nocopyright
+Work Directory: /home/admin/shared/ECDSA
+ 
+*** Message Type: info ***
+When: Sun Mar 16 08:22:51 EDT 2025
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Sun Mar 16 08:22:59 EDT 2025
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Sun Mar 16 08:23:08 EDT 2025
+Connect to Simulator
+      Design: worklib.modular_addition:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:        xmsim(64)       20.09-s001
+        User: admin
+        Host: centos7
+Time Started: Sun Mar 16 08:22:40 EDT 2025
+  Process ID: 66280
+   Directory: /home/admin/shared/ECDSA
+     Command: xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPD.sv -timescale 1ns/10ps +access+rcw
+
+ 
+*** Message Type: info ***
+When: Sun Mar 16 08:23:10 EDT 2025
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Sun Mar 16 08:23:35 EDT 2025
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Sun Mar 16 08:24:41 EDT 2025
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: error ***
+When: Sun Mar 16 08:24:41 EDT 2025
+invalid command name "::SVSidebarManager::designSearchSidebar1"
+    while executing
+"::SVSidebarManager::designSearchSidebar1 fixSearchProgress"
+    (in namespace inscope "::DesignSearchSidebar" script line 1)
+    invoked from within
+"namespace inscope ::DesignSearchSidebar {::SVSidebarManager::designSearchSidebar1 fixSearchProgress}"
+    (while executing -progresscommand in dac::search)
+ 
+*** Message Type: error ***
+When: Sun Mar 16 08:24:41 EDT 2025
+invalid command name "::SVSidebarManager::designSearchSidebar1"
+    while executing
+"::SVSidebarManager::designSearchSidebar1 fixSearchProgress"
+    (in namespace inscope "::DesignSearchSidebar" script line 1)
+    invoked from within
+"namespace inscope ::DesignSearchSidebar {::SVSidebarManager::designSearchSidebar1 fixSearchProgress}"
+    (while executing -progresscommand in dac::search)
+ 
+*** Message Type: error ***
+When: Sun Mar 16 08:24:41 EDT 2025
+invalid command name "::SVSidebarManager::designSearchSidebar1"
+    while executing
+"::SVSidebarManager::designSearchSidebar1 fixSearchProgress"
+    (in namespace inscope "::DesignSearchSidebar" script line 1)
+    invoked from within
+"namespace inscope ::DesignSearchSidebar {::SVSidebarManager::designSearchSidebar1 fixSearchProgress}"
+    (while executing -progresscommand in dac::search)
+ 
+*** Message Type: error ***
+When: Sun Mar 16 08:24:41 EDT 2025
+invalid command name "::SVSidebarManager::designSearchSidebar1"
+    while executing
+"::SVSidebarManager::designSearchSidebar1 fixSearchProgress"
+    (in namespace inscope "::DesignSearchSidebar" script line 1)
+    invoked from within
+"namespace inscope ::DesignSearchSidebar {::SVSidebarManager::designSearchSidebar1 fixSearchProgress}"
+    (while executing -progresscommand in dac::search)
+ 
+*** Message Type: error ***
+When: Sun Mar 16 08:24:41 EDT 2025
+0can't resolve scoped variable "@itcl ::SVSidebarManager::designSearchSidebar1 ::DesignSearchSidebar::_results": can't find object ::SVSidebarManager::designSearchSidebar1
+    while executing
+"dac::search $dacH -consider $consider -signals $types  -patterns $patterns -nocase $opts(-nocase)  -interfacerefs 0  -packages 1 -compunits 1  -value ..."
+    ("start" arm line 82)
+    invoked from within
+"switch -- $option {
+        start {
+            #_sbar_record {control start}
+            set flag_start 1
+            array set opts [parameters]
+
+  ..."
+    (method "::DesignSearchSidebar::search" body line 16)
+    invoked from within
+"::SVSidebarManager::designSearchSidebar1 search start"
+    (in namespace inscope "::DesignSearchSidebar" script line 1)
+    invoked from within
+"namespace inscope ::DesignSearchSidebar {::SVSidebarManager::designSearchSidebar1 search start}"
+    ("after" script)
+ 
+*** Message Type: error ***
+When: Sun Mar 16 08:24:46 EDT 2025
+can't resolve scoped variable "@itcl ::SVSidebarManager::designSearchSidebar1 ::DesignSearchSidebar::_results": can't find object ::SVSidebarManager::designSearchSidebar1
+    while executing
+"dac::search $dacH -consider $consider -signals $types  -patterns $patterns -nocase $opts(-nocase)  -interfacerefs 0  -packages 1 -compunits 1  -value ..."
+    ("start" arm line 82)
+    invoked from within
+"switch -- $option {
+        start {
+            #_sbar_record {control start}
+            set flag_start 1
+            array set opts [parameters]
+
+  ..."
+    (method "::DesignSearchSidebar::search" body line 16)
+    invoked from within
+"::SVSidebarManager::designSearchSidebar1 search start"
+    (in namespace inscope "::DesignSearchSidebar" script line 1)
+    invoked from within
+"namespace inscope ::DesignSearchSidebar {::SVSidebarManager::designSearchSidebar1 search start}"
+    ("after" script)
+ 
+*** Message Type: error ***
+When: Sun Mar 16 08:24:46 EDT 2025
+can't resolve scoped variable "@itcl ::SVSidebarManager::designSearchSidebar1 ::DesignSearchSidebar::_results": can't find object ::SVSidebarManager::designSearchSidebar1
+    while executing
+"dac::search $dacH -consider $consider -signals $types  -patterns $patterns -nocase $opts(-nocase)  -interfacerefs 0  -packages 1 -compunits 1  -value ..."
+    ("start" arm line 82)
+    invoked from within
+"switch -- $option {
+        start {
+            #_sbar_record {control start}
+            set flag_start 1
+            array set opts [parameters]
+
+  ..."
+    (method "::DesignSearchSidebar::search" body line 16)
+    invoked from within
+"::SVSidebarManager::designSearchSidebar1 search start"
+    (in namespace inscope "::DesignSearchSidebar" script line 1)
+    invoked from within
+"namespace inscope ::DesignSearchSidebar {::SVSidebarManager::designSearchSidebar1 search start}"
+    ("after" script)
+ 
+*** Message Type: info ***
+When: Sun Mar 16 08:24:48 EDT 2025
+Delete browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Sun Mar 16 08:24:51 EDT 2025
+SimVision Exit.
+ 

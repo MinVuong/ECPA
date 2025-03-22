@@ -1,0 +1,23 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: GENUS15.20 - 15.20-p004_1, built Sat Nov 14 2015
+Options: -files ./03_synth/genus_shell.tcl 
+Date:    Wed Jul 31 12:09:07 2024
+Host:    centos7 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (1*AMD Ryzen 5 5600H with Radeon Graphics 512KB)
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+Sourcing GUI preferences file /home/admin/.cadence/genus/gui.tcl...
+Finished loading tool scripts (5 seconds elapsed).
+
+Sourcing ./03_synth/genus_shell.tcl ...
+File './03_synth/genus_shell.tcl' does not exist.
+Encountered problems processing file: ./03_synth/genus_shell.tcl
+WARNING: This version of the tool is 3182 days old.
+genus@root:> exit
+Normal exit.

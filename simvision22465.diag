@@ -1,0 +1,103 @@
+*** Message Type: info ***
+When: Tue Mar 18 04:08:06 EDT 2025
+SimVision started.
+Version: TOOL:  simvision(64)   20.09-s001
+User: admin
+Host: centos7
+Platform: Linux/x86_64/3.10.0-1160.108.1.el7.x86_64
+Started: Tue Mar 18 04:08:06 EDT 2025
+Command: /opt/cadence/XCELIUM2009/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:centos7:34340 -64BIT -nocopyright
+Work Directory: /home/admin/shared/ECDSA
+ 
+*** Message Type: info ***
+When: Tue Mar 18 04:08:07 EDT 2025
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Tue Mar 18 04:08:08 EDT 2025
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Tue Mar 18 04:08:10 EDT 2025
+Connect to Simulator
+      Design: worklib.tb_ECPA:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL: xmsim(64)       20.09-s001
+        User: admin
+        Host: centos7
+Time Started: Tue Mar 18 04:08:04 EDT 2025
+  Process ID: 22452
+   Directory: /home/admin/shared/ECDSA
+     Command: xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw
+
+ 
+*** Message Type: info ***
+When: Tue Mar 18 04:08:10 EDT 2025
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Tue Mar 18 04:09:04 EDT 2025
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Tue Mar 18 04:13:15 EDT 2025
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: error ***
+When: Tue Mar 18 04:13:15 EDT 2025
+invalid command name ".waveWindow0.work.user.waveset"
+    while executing
+"$itk_component(waveset) component signaldata"
+    (method "::WaveWindow::enableDisableTreeNotification" body line 2)
+    invoked from within
+"enableDisableTreeNotification 0"
+    (method "::WaveWindow::addDacPointers" body line 2)
+    invoked from within
+"addDacPointers [lindex $args 0] -literal"
+    ("add" arm line 8)
+    invoked from within
+"switch -- $operation {
+                  chunksize {
+                        return 200
+                 }
+                      clear {
+                            windows setBusy hold
+                           $itk_component(waveset) delete all "Clear"
+..."
+    ("daclist" arm line 4)
+    invoked from within
+"switch -- $inf {
+               daclist {
+                  set operation [lindex $args 0]
+                 set args [lrange $args 1 end]
+                  switch -- $operation {
+                     chunksize {
+                     ..."
+    ("do" arm line 4)
+    invoked from within
+"switch -- $option {
+        interfaces {
+            set viewerInterfaces "scope daclist dacsearch trace time power comparison timefold"
+            i..."
+    (method "::WaveWindow::viewer" body line 3)
+    invoked from within
+".waveWindow0 viewer do daclist add @public@14b"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 $opts(-routecommand) $args"
+    (method "::Datarouter::route" body line 11)
+    invoked from within
+"$_main.results.add route viewer add $selected"
+    (method "::DesignSearchSidebar::fixSelectRelease" body line 14)
+    invoked from within
+"::SVSidebarManager::designSearchSidebar1 fixSelectRelease"
+    (in namespace inscope "::DesignSearchSidebar" script line 1)
+    invoked from within
+"namespace inscope ::DesignSearchSidebar {::SVSidebarManager::designSearchSidebar1 fixSelectRelease}"
+    (command bound to event)
+ 
+*** Message Type: info ***
+When: Tue Mar 18 04:13:25 EDT 2025
+SimVision Exit.
+ 

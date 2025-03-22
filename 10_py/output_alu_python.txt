@@ -1,0 +1,133 @@
+Testcase 1:
+alu_sel = 0b1
+a = 0x23
+b = 0x19
+prime = 0x7f
+Result: 3C
+
+Testcase 2:
+alu_sel = 0b10
+a = 0x5a
+b = 0x3c
+prime = 0x7f
+Result: 1E
+
+Testcase 3:
+alu_sel = 0b11
+a = 0x5
+b = 0x7
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: 23
+
+Testcase 4:
+alu_sel = 0b100
+a = 0x1
+b = 0x3
+prime = 0x7
+Result: ERROR
+
+Testcase 5:
+alu_sel = 0b11
+a = 0xf1234567890ab
+b = 0xabcde1234567
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: A1D47CABF5A4E49EE5BE14BCD
+
+Testcase 6:
+alu_sel = 0b100
+a = 0x1
+b = 0xa1b2c3d4e5f60
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: ERROR
+
+Testcase 7:
+alu_sel = 0b1
+a = 0xffffffffffffe1
+b = 0xe
+prime = 0xfffffffffffff7
+Result: FFFFFFFFFFFFEF
+
+Testcase 8:
+alu_sel = 0b10
+a = 0xffffffffffffda
+b = 0x123456789abcd
+prime = 0xffffffffffffef
+Result: FEDCBA9876540D
+
+Testcase 9:
+alu_sel = 0b1
+a = 0x37
+b = 0x19
+prime = 0xa7
+Result: 50
+
+Testcase 10:
+alu_sel = 0b10
+a = 0x89
+b = 0x45
+prime = 0xc1
+Result: 44
+
+Testcase 11:
+alu_sel = 0b11
+a = 0xc
+b = 0x9
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: 6C
+
+Testcase 12:
+alu_sel = 0b100
+a = 0x1
+b = 0xb
+prime = 0x1f
+Result: ERROR
+
+Testcase 13:
+alu_sel = 0b1
+a = 0x59a3b
+b = 0x7c2d
+prime = 0xfffffffffffffd
+Result: 61668
+
+Testcase 14:
+alu_sel = 0b10
+a = 0x29d1
+b = 0x53c7
+prime = 0xfffffffffffff1
+Result: FFFFFFFFFFD5FB
+
+Testcase 15:
+alu_sel = 0b11
+a = 0xabcde
+b = 0x12345
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: C379541D6
+
+Testcase 16:
+alu_sel = 0b1
+a = 0xfffffffffffffffffffffffffffffffe
+b = 0xfffffffffffffffffffffffffffffffd
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: 71
+
+Testcase 17:
+alu_sel = 0b10
+a = 0xfffffffffffffffffffffffffffffffc
+b = 0xfffffffffffffffffffffffffffffffa
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: 2
+
+Testcase 18:
+alu_sel = 0b11
+a = 0xfffffffffffffffffffffffffffffff8
+b = 0xfffffffffffffffffffffffffffffff4
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: 95D
+
+Testcase 19:
+alu_sel = 0b100
+a = 0x1
+b = 0xfffffffffffffffffffffffffffffff2
+prime = 0xffffffffffffffffffffffffffffffc5
+Result: ERROR
+

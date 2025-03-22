@@ -1,0 +1,47 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+xrun: *W,FMDEF: The default file type mapping of .sv is being overwritten.
+TOOL:	xrun(64)	20.09-s001: Started on Mar 21, 2025 at 05:05:59 EDT
+xrun
+	+xm64bit
+	-sv
+	-vlogext .sv
+	-f 00_src/flist.f
+		00_src/BlackCell.sv
+		00_src/GrayCell.sv
+		00_src/BrentKung.sv
+		00_src/xor16.sv
+		00_src/pg16.sv
+		00_src/BK256.sv
+		00_src/modular_multiplication.sv
+		00_src/modular_subtractor.sv
+		00_src/modular_addition.sv
+		00_src/ECPA.sv
+	01_tb/tb_modular_multiplication.sv
+	-timescale 1ns/10ps
+	+access+rcw
+Recompiling... reason: file './00_src/mont_final.sv' is newer than expected.
+	expected: Fri Mar 21 01:30:56 2025
+	actual:   Fri Mar 21 03:25:56 2025
+file: 00_src/modular_multiplication.sv
+	module worklib.modular_multiplication:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ECPA
+		tb_modular_multiplication
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+        .b(Z2_CUBE),
+                 |
+xmelab: *W,CUVMPW (./00_src/ECPA.sv,138|17): port sizes differ in port connection(1/256) for the instance(ECPA) .
+        .b(Z1_CUBE),
+                 |
+xmelab: *W,CUVMPW (./00_src/ECPA.sv,149|17): port sizes differ in port connection(1/256) for the instance(ECPA) .
+        .ready(done_Z1_SQ)
+             |
+xmelab: *E,MULDRN (./00_src/ECPA.sv,52|13): Variable 'ECPA.done_Z1_SQ' has multiple conflicting drivers and the indicated output port connection in scope 'ECPA' is contributing to this conflict set.
+        .ready(done_Z1_SQ)
+             |
+xmelab: *E,MULDRN (./00_src/ECPA.sv,63|13): Variable 'ECPA.done_Z1_SQ' has multiple conflicting drivers and the indicated output port connection in scope 'ECPA' is contributing to this conflict set.
+xrun: *E,ELBERR: Error during elaboration (status 1), exiting.
+TOOL:	xrun(64)	20.09-s001: Exiting on Mar 21, 2025 at 05:06:01 EDT  (total: 00:00:02)
