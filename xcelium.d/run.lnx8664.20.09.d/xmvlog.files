@@ -12,4 +12,4 @@
 /home/admin/shared/ECDSA/00_src/modular_subtractor.sv
 /home/admin/shared/ECDSA/00_src/modular_addition.sv
 /home/admin/shared/ECDSA/00_src/ECPA.sv
-/home/admin/shared/ECDSA/01_tb/tb_modular_multiplication.sv
+/home/admin/shared/ECDSA/01_tb/tb_ECPA.sv

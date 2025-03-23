@@ -25,8 +25,20 @@ module ECPA (
  logic done_stage1;
  logic done_Z1_Z2, done_Z1_SQ, done_Z2_SQ ;
  logic [255:0] Z1_Z2, Z1_SQ, Z2_SQ;
- assign start_stage1 = i_start;
+// assign start_stage1 = i_start;
 
+logic start_pulse_stage1, start_d_stage1;
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_d_stage1   <= 1'b0;
+        start_pulse_stage1 <= 1'b0;
+    end else begin
+        start_d_stage1   <= i_start;                   // Lưu giá trị trước của i_start
+        start_pulse_stage1 <= i_start & ~start_d_stage1;      // Chỉ bật khi i_start chuyển từ 0 -> 1
+    end
+end
+assign start_stage1 = start_pulse_stage1;
 
 //Z1Z2
  modular_multiplication mult10 (
@@ -71,7 +83,18 @@ logic start_stage2;
  logic done_stage2;
  logic done_Z1_cube, done_U1, done_U2, done_Z2_cube ;
  logic [255:0] Z1_cube, Z2_cube, U1, U2;
- assign start_stage2 = done_stage1;
+logic start_pulse_stage2, start_d_stage2;
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_d_stage2   <= 1'b0;
+        start_pulse_stage2 <= 1'b0;
+    end else begin
+        start_d_stage2   <= done_stage1;                   // Lưu giá trị trước của i_start
+        start_pulse_stage2 <= done_stage1 & ~start_d_stage2;      // Chỉ bật khi i_start chuyển từ 0 -> 1
+    end
+end
+assign start_stage2 = start_pulse_stage2;
 
 //Z1_cube
  modular_multiplication mult20 (
@@ -127,7 +150,32 @@ modular_multiplication mult23 (
  logic done_stage3;
  logic done_S1, done_S2, done_H ;
  logic [255:0] S1, S2, H;
- assign start_stage3 = done_stage2;
+ //assign start_stage3 = done_stage2;
+ logic start_pulse_stage3, start_d_stage3;
+ //logic start_stage3_sub;
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_d_stage3   <= 1'b0;
+        start_pulse_stage3 <= 1'b0;
+    end else begin
+        start_d_stage3   <= done_stage2;                   // Lưu giá trị trước của i_start
+        start_pulse_stage3 <= done_stage2 & ~start_d_stage3;      // Chỉ bật khi i_start chuyển từ 0 -> 1
+    end
+end
+assign start_stage3 = start_pulse_stage3;
+//assign start_stage3_sub= done_stage2;
+reg start_stage3_sub;
+
+always @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n)
+        start_stage3_sub <= 0;
+    else if (done_stage2)  // Bắt đầu instance sub khi stage 1 hoàn thành
+        start_stage3_sub <= 1;
+    else if (done_H)  // Tắt khi instance sub hoàn thành
+        start_stage3_sub <= 0;
+end
+
 
 //S1 = Y1*Z2_cube
  modular_multiplication mult30 (
@@ -153,7 +201,7 @@ modular_multiplication mult31 (
     );
 //h = U1-U22
 modular_subtractor sub32(
-	.i_start(start_stage3),
+	.i_start(start_stage3_sub),
 	.i_clk(i_clk),
 	.i_rst_n(i_rst_n),
 	.A(U1),
@@ -171,11 +219,34 @@ modular_subtractor sub32(
  logic done_stage4;
  logic done_R, done_Z3, done_H_SQ ;
  logic [255:0] R, H_SQ;
- assign start_stage4 = done_stage3;
+ //assign start_stage4 = done_stage3;
+ logic start_pulse_stage4, start_d_stage4;
 
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_d_stage4   <= 1'b0;
+        start_pulse_stage4 <= 1'b0;
+    end else begin
+        start_d_stage4   <= done_stage3;                   // Lưu giá trị trước của i_start
+        start_pulse_stage4 <= done_stage3 & ~start_d_stage4;      // Chỉ bật khi i_start chuyển từ 0 -> 1
+    end
+end
+assign start_stage4 = start_pulse_stage4;
+// chú ý control chỗ trừ và nhân tại nhân thì chỉ cần start 1 clock còn cộng trừ thì bật lun
+
+reg start_stage4_sub;
+
+always @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n)
+        start_stage4_sub <= 0;
+    else if (done_stage3)  // Bắt đầu instance sub khi stage 1 hoàn thành
+        start_stage4_sub <= 1;
+    else if (done_R)  // Tắt khi instance sub hoàn thành
+        start_stage4_sub <= 0;
+end
 //R=S1-S2
 modular_subtractor sub40(
-	.i_start(start_stage4),
+	.i_start(start_stage4_sub),
 	.i_clk(i_clk),
 	.i_rst_n(i_rst_n),
 	.A(S1),
@@ -217,7 +288,19 @@ modular_subtractor sub40(
  logic done_stage5;
  logic done_V, done_H_cube, done_R_SQ ;
  logic [255:0] V,H_cube, R_SQ;
- assign start_stage5 = done_stage4;
+ //assign start_stage5 = done_stage4;
+ logic start_pulse_stage5, start_d_stage5;
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_d_stage5   <= 1'b0;
+        start_pulse_stage5 <= 1'b0;
+    end else begin
+        start_d_stage5   <= done_stage4;                   // Lưu giá trị trước của i_start
+        start_pulse_stage5 <= done_stage4 & ~start_d_stage5;      // Chỉ bật khi i_start chuyển từ 0 -> 1
+    end
+end
+assign start_stage5 = start_pulse_stage5;
 
 // V = U1*H_SQ
   modular_multiplication mult50 (
@@ -263,7 +346,30 @@ modular_subtractor sub40(
  logic done_stage6;
  logic done_twoV, done_R_SQ_ADD_G ;
  logic [255:0] twoV, R_SQ_ADD_G;
- assign start_stage6 = done_stage5;
+ //assign start_stage6 = done_stage5;
+ logic start_pulse_stage6, start_d_stage6;
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_d_stage6   <= 1'b0;
+        start_pulse_stage6 <= 1'b0;
+    end else begin
+        start_d_stage6   <= done_stage5;                   // Lưu giá trị trước của i_start
+        start_pulse_stage6 <= done_stage5 & ~start_d_stage6;      // Chỉ bật khi i_start chuyển từ 0 -> 1
+    end
+end
+assign start_stage6 = start_pulse_stage6;
+
+reg start_stage6_add;
+
+always @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n)
+        start_stage6_add <= 0;
+    else if (done_stage5)  // Bắt đầu instance sub khi stage 1 hoàn thành
+        start_stage6_add <= 1;
+    else if (done_R_SQ_ADD_G)  // Tắt khi instance sub hoàn thành
+        start_stage6_add <= 0;
+end
 
 // 2V
   modular_multiplication mult60 (
@@ -279,7 +385,7 @@ modular_subtractor sub40(
 
 // R_SQ + G
  modular_addition add61(
-	.i_start(start_stage6),
+	.i_start(start_stage6_add),
 	.i_clk(i_clk),
 	.i_rst_n(i_rst_n),
 	.A(R_SQ),
@@ -297,8 +403,17 @@ modular_subtractor sub40(
  logic done_stage7;
  logic done_X3 ;
  //logic [255:0] X3;
- assign start_stage7 = done_stage6;
+ //assign start_stage7 = done_stage6;
+reg start_stage7_sub;
 
+always @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n)
+        start_stage7 <= 0;
+    else if (done_stage6)  // Bắt đầu instance sub khi stage 1 hoàn thành
+        start_stage7 <= 1;
+    else if (done_X3)  // Tắt khi instance sub hoàn thành
+        start_stage7 <= 0;
+end
 
 // R_SQ + G - 2V
  modular_subtractor sub71(
@@ -319,8 +434,16 @@ modular_subtractor sub40(
  logic done_stage8;
  logic done_V_SUB_X3 ;
  logic [255:0] V_SUB_X3;
- assign start_stage8 = done_stage7;
+ //assign start_stage8 = done_stage7;
 
+always @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n)
+        start_stage8 <= 0;
+    else if (done_stage7)  // Bắt đầu instance sub khi stage 1 hoàn thành
+        start_stage8 <= 1;
+    else if (done_V_SUB_X3)  // Tắt khi instance sub hoàn thành
+        start_stage8 <= 0;
+end
 
 // R_SQ + G - 2V
  modular_subtractor sub80(
@@ -342,7 +465,19 @@ modular_subtractor sub40(
 // logic done_stage9;
  //logic done_Y3 ;
  //logic [255:0] Y3;
- assign start_stage9 = done_stage8;
+ //assign start_stage9 = done_stage8;
+ logic start_pulse_stage9, start_d_stage9;
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_d_stage9   <= 1'b0;
+        start_pulse_stage9 <= 1'b0;
+    end else begin
+        start_d_stage9   <= done_stage8;                   // Lưu giá trị trước của i_start
+        start_pulse_stage9 <= done_stage8 & ~start_d_stage9;      // Chỉ bật khi i_start chuyển từ 0 -> 1
+    end
+end
+assign start_stage9 = start_pulse_stage9;
 
 
 // R_SQ + G - 2V

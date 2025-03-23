@@ -1,3 +1,40 @@
 s1(21Mar2025:23:06:17):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
 s2(21Mar2025:23:11:23):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
 s3(21Mar2025:23:12:29):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s4(21Mar2025:23:19:14):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s5(21Mar2025:23:20:36):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s6(21Mar2025:23:33:36):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s7(21Mar2025:23:43:57):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s8(21Mar2025:23:45:23):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s9(21Mar2025:23:45:42):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s10(21Mar2025:23:56:08):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s11(21Mar2025:23:56:26):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s12(22Mar2025:05:54:50):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s13(22Mar2025:06:11:42):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s14(22Mar2025:06:11:53):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s15(22Mar2025:09:05:44):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s16(22Mar2025:09:06:32):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s17(22Mar2025:09:06:46):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s18(22Mar2025:09:07:02):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s19(22Mar2025:09:17:18):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s20(22Mar2025:09:18:14):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s21(22Mar2025:09:18:31):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s22(22Mar2025:09:30:11):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s23(22Mar2025:09:30:24):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_modular_multiplication.sv -timescale 1ns/10ps +access+rcw 
+s24(22Mar2025:09:31:51):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s25(22Mar2025:20:47:54):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s26(22Mar2025:20:51:51):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s27(22Mar2025:22:35:47):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s28(22Mar2025:22:36:05):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s29(22Mar2025:22:54:31):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s30(22Mar2025:22:55:24):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s31(22Mar2025:23:02:52):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s32(22Mar2025:23:09:21):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s33(22Mar2025:23:09:44):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s34(22Mar2025:23:10:03):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s35(22Mar2025:23:13:47):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s36(22Mar2025:23:24:26):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s37(22Mar2025:23:37:52):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s38(22Mar2025:23:38:41):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s39(22Mar2025:23:53:06):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s40(22Mar2025:23:55:15):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 

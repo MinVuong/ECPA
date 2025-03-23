@@ -1,13 +1,14 @@
 //'timescale 1ns/1ns
-module modular_multiplication (clk, rst_n, start, a, b, m, p, ready);            // p = a * b mod m
-    input          clk, rst_n;
-    input          start;
-    input  [255:0] a, b, m;
-    output [255:0] p;
-    output    reg     ready;
+module modular_multiplication (          // p = a * b mod m
+    input          clk, rst_n,
+    input          start,
+    input  [255:0] a, b, m,
+    output reg [255:0] p,
+    output    reg     ready
+);
   //  output reg     busy;
   //  output reg     ready0;
-  reg busy, ready0;
+    reg busy, ready0;
     reg            ready1;
     assign ready = ready0 ^ ready1;
     reg    [257:0] u, s;

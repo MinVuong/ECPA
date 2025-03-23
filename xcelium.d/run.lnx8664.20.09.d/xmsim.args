@@ -4,11 +4,12 @@
 //
 +xm64bit
 +access+rcw
+-gui
 -MESSAGES
 +EMGRLOG
 xrun.log
 -XLSTIME
-1742613149
+1742702115
 -XLKEEP
 -XLMODE
 ./xcelium.d/run.lnx8664.20.09.d

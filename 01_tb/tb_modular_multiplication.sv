@@ -38,14 +38,24 @@ module tb_modular_multiplication;
         #10;
 
         // Test Case 1: a = 3, b = 4, m = 5 -> Expected p = (3*4) mod 5 = 2
-        a = 256'hF7E75FDC469067FFDC439B16B7D2F0FBA2F3B5A6ABF5A7E7CE0F05EDDA3C339B;
-        b = 256'hE5A3B45D7F29DCE6E89E3F08A7F68DAE8B771B75D7422F9A63FA9D423D51D6E9;
-        m = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF43;
+        a = 256'h1;
+        b = 256'h1;
+        m = 256'd23;
         start = 1;
-        #10 start = 0;
+        
         
         // Wait for computation to complete
         wait (ready);
+        #10 start = 0;
+        $display("Test Case 1: p = %h", p);
+        #10;
+         b = 256'hF7E75FDC469067FFDC439B16B7D2F0FBA2F3B5A6ABF5A7E7CE0F05EDDA3C339B;
+        a = 256'hE5A3B45D7F29DCE6E89E3F08A7F68DAE8B771B75D7422F9A63FA9D423D51D6E9;
+        m = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF43;
+        start = 1;
+       
+        wait (ready);
+         #10 start = 0;
         $display("Test Case 1: p = %h", p);
         
 
