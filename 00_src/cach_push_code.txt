@@ -12,4 +12,4 @@ Bước 3: main là nhánh mình push lên. có thể xem nhánh hiện tại b�
 hoặc: git push
 
 
-(sau lần push đầu thì có thể rút gọn thành "git push")
+(sau lần push đầu thì có thể rút gọn thành "git push") 

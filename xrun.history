@@ -38,3 +38,6 @@ s37(22Mar2025:23:37:52):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb
 s38(22Mar2025:23:38:41):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
 s39(22Mar2025:23:53:06):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
 s40(22Mar2025:23:55:15):  xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s41(23Mar2025:00:10:02):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s42(23Mar2025:00:36:19):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
+s43(23Mar2025:00:37:26):  xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECPA.sv -timescale 1ns/10ps +access+rcw 
