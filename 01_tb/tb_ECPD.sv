@@ -18,7 +18,7 @@ module tb_ecpd;
   logic o_done;
 
   // Instantiate the Unit Under Test (UUT)
-  ecpd uut (
+  ECPD uut (
     .i_clk(i_clk),
     .i_rst_n(i_rst_n),
     .i_start(i_start),

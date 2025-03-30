@@ -1,6 +1,6 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
 xrun: *W,FMDEF: The default file type mapping of .sv is being overwritten.
-TOOL:	xrun(64)	20.09-s001: Started on Mar 23, 2025 at 00:37:26 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Mar 30, 2025 at 02:25:39 EDT
 xrun
 	+xm64bit
 	-sv
@@ -19,9 +19,36 @@ xrun
 	01_tb/tb_ECPA.sv
 	-timescale 1ns/10ps
 	+access+rcw
-Recompiling... reason: file './01_tb/tb_ECPA.sv' is newer than expected.
-	expected: Sun Mar 23 00:36:13 2025
-	actual:   Sun Mar 23 00:37:16 2025
+file: 00_src/BlackCell.sv
+	module worklib.BlackCell:sv
+		errors: 0, warnings: 0
+file: 00_src/GrayCell.sv
+	module worklib.GrayCell:sv
+		errors: 0, warnings: 0
+file: 00_src/BrentKung.sv
+	module worklib.BrentKung:sv
+		errors: 0, warnings: 0
+file: 00_src/xor16.sv
+	module worklib.xor16:sv
+		errors: 0, warnings: 0
+file: 00_src/pg16.sv
+	module worklib.pg16:sv
+		errors: 0, warnings: 0
+file: 00_src/BK256.sv
+	module worklib.BK256:sv
+		errors: 0, warnings: 0
+file: 00_src/modular_multiplication.sv
+	module worklib.modular_multiplication:sv
+		errors: 0, warnings: 0
+file: 00_src/modular_subtractor.sv
+	module worklib.modular_subtractor:sv
+		errors: 0, warnings: 0
+file: 00_src/modular_addition.sv
+	module worklib.modular_addition:sv
+		errors: 0, warnings: 0
+file: 00_src/ECPA.sv
+	module worklib.ECPA:sv
+		errors: 0, warnings: 0
 file: 01_tb/tb_ECPA.sv
 	module worklib.tb_ECPA:sv
 		errors: 0, warnings: 0
@@ -32,8 +59,24 @@ file: 01_tb/tb_ECPA.sv
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
+		worklib.modular_addition:sv <0x5227f245>
+			streams:   7, words:  4739
+		worklib.BK256:sv <0x48e99a61>
+			streams:  71, words: 28400
+		worklib.pg16:sv <0x6c209284>
+			streams:   0, words:     0
+		worklib.BrentKung:sv <0x3c16aeae>
+			streams:   0, words:     0
+		worklib.BK256:sv <0x64b2ebf3>
+			streams:  71, words: 28589
+		worklib.modular_subtractor:sv <0x4b378877>
+			streams:   7, words:  4790
+		worklib.modular_multiplication:sv <0x1fcd5083>
+			streams:  19, words:  8175
+		worklib.ECPA:sv <0x2d14f66d>
+			streams: 117, words: 37630
 		worklib.tb_ECPA:sv <0x0c11fa95>
-			streams:  12, words: 13374
+			streams:  12, words: 12774
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -54,13 +97,13 @@ Loading snapshot worklib.tb_ECPA:sv .................... Done
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> run
-X3 = 7553c79df2af8d155525d2c9643e3cd11445c2f57ee3d9bec8330bdc39151366
-Y3 = 6a0b340a80f1b04607dc17f0f477313ec1a94aeae8d73954ada68db961d9ef7a
-Z3 = b4b2c1718093b6c29b1144642a0968b7ed0217fa7a617fa2b0960ffc1a40553a
-X3 = 000000000000000000000000000000000000000000000000000000000000000e
-Y3 = 0000000000000000000000000000000000000000000000000000000000000001
-Z3 = 0000000000000000000000000000000000000000000000000000000000000015
+X3 = fffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc30
+Y3 = ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+Z3 = 0000000000000000000000000000000000000000000000000000000000000000
+X3 = 0000000000000000000000000000000000000000000000000000000000000f49
+Y3 = fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeff10
+Z3 = 0000000000000000000000000000000000000000000000000000000000000000
 Simulation complete via $finish(1) at time 57685 NS + 0
 ./01_tb/tb_ECPA.sv:83         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Mar 23, 2025 at 00:37:27 EDT  (total: 00:00:01)
+TOOL:	xrun(64)	20.09-s001: Exiting on Mar 30, 2025 at 02:25:41 EDT  (total: 00:00:02)

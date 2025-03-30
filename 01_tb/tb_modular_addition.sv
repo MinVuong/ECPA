@@ -37,9 +37,9 @@ module tb_modular_addition;
         #10 i_rst_n = 1;
         
         // Test case 1: A + B < p
-        A = 256'h123456789;
+        A = 256'hfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc30;
         B = 256'h0;
-        p = 256'hfffffffff;
+        p = 256'hfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f;
         #10 i_start = 1;
         
         wait(done);

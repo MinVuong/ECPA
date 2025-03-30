@@ -8,8 +8,8 @@ module tb_modular_inversion;
     reg [255:0] b, a, m;
     wire [255:0] c;
     wire ready;
-    wire busy;
-    wire ready0;
+   // wire busy;
+   // wire ready0;
 
     // Khởi tạo mô-đun
     modular_inversion uut (
@@ -20,9 +20,9 @@ module tb_modular_inversion;
         .a(a),
         .m(m),
         .c(c),
-        .ready(ready),
-        .busy(busy),
-        .ready0(ready0)
+        .ready(ready)
+        //.busy(busy),
+        //.ready0(ready0)
     );
 
     // Tạo tín hiệu đồng hồ
@@ -37,8 +37,8 @@ module tb_modular_inversion;
         rst_n = 0;
         start = 0;
         
-	b = 256'h00000000000000000000000000000000000000000000000000000000000000be;
-    a = 256'd1;
+	a = 256'h00000000000000000000000000000000000000000000000000000000000000be;
+    b = 256'd1;
 	m = 256'd367;
         //expected_result = 255'h0;
         
@@ -49,15 +49,13 @@ module tb_modular_inversion;
         // Bắt đầu phép toá
         start = 1; // Kích hoạt phép toán
        
-        #10;
-         start =0;
         // Chờ kết quả
         wait(ready); // Chờ cho ready được kích hoạt
 
         // In kết quả
         #10;
         $display("Result: c = %h", c);
-        $display("Ready: %b, Busy: %b", ready, busy);
+      //  $display("Ready: %b, Busy: %b", ready, busy);
        // if (expected_result == c) $display("Verified succeeded");
        // else $display("Verified not succeeded");
 

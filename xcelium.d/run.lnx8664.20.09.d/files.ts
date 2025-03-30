@@ -8,6 +8,14 @@
 1742638037 /home/admin/shared/ECDSA/00_src/modular_multiplication.sv
 1740559403 /home/admin/shared/ECDSA/00_src/modular_subtractor.sv
 1740558528 /home/admin/shared/ECDSA/00_src/modular_addition.sv
-1742702102 /home/admin/shared/ECDSA/00_src/ECPA.sv
+1742712745 /home/admin/shared/ECDSA/00_src/ECPA.sv
 1742649489 /home/admin/shared/ECDSA/01_tb/tb_modular_multiplication.sv
-1742704636 /home/admin/shared/ECDSA/01_tb/tb_ECPA.sv
+1743315852 /home/admin/shared/ECDSA/01_tb/tb_ECPA.sv
+1742715111 /home/admin/shared/ECDSA/00_src/modular_inversion.sv
+1742715327 /home/admin/shared/ECDSA/01_tb/tb_modular_inversion.sv
+1742720915 /home/admin/shared/ECDSA/01_tb/tb_scalar_multiplication.sv
+1742721352 /home/admin/shared/ECDSA/00_src/ECPD.sv
+1743308715 /home/admin/shared/ECDSA/00_src/scalar_mult.sv
+1743299192 /home/admin/shared/ECDSA/01_tb/tb_scalar_mult.sv
+1743195561 /home/admin/shared/ECDSA/01_tb/tb_ECPD.sv
+1743314574 /home/admin/shared/ECDSA/01_tb/tb_modular_addition.sv

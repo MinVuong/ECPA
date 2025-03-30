@@ -1,0 +1,3 @@
+1. ECPD v ECPA phải thực hiện đồng thời nếu kh đồng thời phải lưu R0 và R1 vào 1 thanh ghi nào trước vì nếu không lưu, giá trị bị cập nhật
+--> tới ECPD sẽ bị sai kết quả
+--> thêm X0_adding,X1_adding,Y0_adding,Y1_adding ...

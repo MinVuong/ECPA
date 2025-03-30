@@ -1,10 +1,11 @@
-module modular_inversion(clk, rst_n, start, b, a, m, c, ready, busy, ready0);            // c = b * a^{-1} mod m
-    input          clk, rst_n;
-    input          start;
-    input  [255:0] b, a, m;
-    output [255:0] c;
-    output         ready, ready0;
-    output reg     busy;
+module modular_inversion(            // c = b * a^{-1} mod m
+    input          clk, rst_n, 
+    input          start,
+    input  [255:0] b, a, m,
+    output [255:0] c,
+    output    reg     ready
+);
+    reg busy;
     reg            ready0,  ready1;
     assign ready = ready0 ^ ready1;
     reg    [259:0] u, v, x, y, q, result;
