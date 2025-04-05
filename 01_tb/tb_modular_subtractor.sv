@@ -4,6 +4,9 @@ module tb_modular_subtractor;
     logic i_start;
     logic i_clk;
     logic i_rst_n;
+    logic [255:0] A;
+    logic [255:0] B;
+    logic [255:0] p;
     logic [255:0] result;
     logic done;
 
@@ -15,6 +18,9 @@ module tb_modular_subtractor;
         .i_start(i_start),
         .i_clk(i_clk),
         .i_rst_n(i_rst_n),
+        .A(A),
+        .B(B),
+        .p(p),
         .result(result),
         .done(done)
     );
@@ -34,6 +40,9 @@ module tb_modular_subtractor;
         // Reset the module
         #10;
         i_rst_n = 1;
+        A=256'h25738ad301228a1922c7d0cee9a6843be7143d0a0c752a58205de16744345b3e;
+        B=256'hbc3a37694b6840274e30efe1d454f62b578ca8bc9917be05bd16b17d8e348984;
+        p=256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
 
         // Start the addition process
         #5;

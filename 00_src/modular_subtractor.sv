@@ -7,10 +7,6 @@ module modular_subtractor(
 	output logic done
 );
 
-//wire [255:0] p, A, B;
-//assign A = 256'h456789abcdef0123456789abcdef0123456789abcdef0;
-//assign B= 256'h888888888888888888888888888888888888888888888;
-//assign p = 256'hdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadb;
 
 ////////--------DATAPATH--------/////////
 //-------datapath variables--------//
@@ -53,6 +49,16 @@ BK256 BKA2(
 	);
 //-----Define Mux 2-1 to choose between s_m and s_m - p-------//
 assign sel_R = cout_1;
+/*
+	begin
+		if (BKA1_result <=p) begin
+			sel_R = 1'b1;
+		end else begin
+			sel_R = cout_1;
+		end
+	end
+	*/
+//assign sel_R = (BKA1_result <= p) ? 1'b1 : cout_1;
 always_comb 
 	begin 
 		if (sel_R)

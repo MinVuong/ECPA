@@ -9,7 +9,7 @@ module ScalarMult (
     output logic o_done
 );
 
-    typedef enum logic [2:0] {IDLE, INIT, WAIT_ECPA, WAIT_ECPD, DONE} state_t;
+    typedef enum logic [2:0] {IDLE, INIT, COMPUTE, WAIT_ECPA, WAIT_ECPD, DONE} state_t;
     state_t state;
     
     logic [255:0] X0, Y0, Z0; // R0
@@ -63,15 +63,27 @@ module ScalarMult (
             case (state)
                 IDLE: begin
                     if (i_start) begin
-                        X0 <= 0; Y0 <= 1; Z0 <= 0; // R0 = Neutral Point
-                        X1 <= X; Y1 <= Y; Z1 <= Z; // R1 = P
-                        bit_pos <= 255;
+                        //bit_pos <= 255;
                         state <= INIT;
+                        X_double <= X; Y_double <= Y; Z_double <= Z; // R_double = P
+                        ecpd_start <= 1;
                     end
                 end
                 
-               
-                INIT: begin
+               INIT: begin
+                    if (ecpd_done) begin
+                        ecpd_start <= 0;
+                        X1 <= X_ecpd; Y1 <= Y_ecpd; Z1 <= Z_ecpd; // R2 = P
+                        X0 <= X; Y0 <= Y; Z0 <= Z; // R0 = Neutral Point
+                        bit_pos <= 255;
+                        enable_double <= 0;
+                        state <= COMPUTE;
+                    end
+               end 
+
+                COMPUTE: begin
+                    bit_pos <= bit_pos - 1;
+
                     if (bit_pos != 0) begin
                         ecpa_start <= 1;
                         enable_add <= 1;
@@ -112,9 +124,8 @@ module ScalarMult (
                         end else begin
                             X0 <= X_ecpd; Y0 <= Y_ecpd; Z0 <= Z_ecpd;                     
                         end
-                        bit_pos <= bit_pos - 1;
                         enable_double <= 0; 
-                        state <= INIT;
+                        state <= COMPUTE;
                     end
                 end
                 

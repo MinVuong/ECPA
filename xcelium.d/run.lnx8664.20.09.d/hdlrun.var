@@ -87,4 +87,4 @@ define VIEW_MAP ( $VIEW_MAP \
 , .SVMS => SVMS \
 )
 define ELAB_SNAPSHOT
-define SNAPSHOT worklib.tb_scalar_mult:sv
+define SNAPSHOT worklib.modular_inversion:sv

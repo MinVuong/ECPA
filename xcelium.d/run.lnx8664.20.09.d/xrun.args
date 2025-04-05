@@ -8,7 +8,7 @@
 .sv
 -f
 00_src/flist.f
-01_tb/tb_ECPA.sv
+01_tb/tb_scalar_mult.sv
 -timescale
 1ns/10ps
 +access+rcw

@@ -16,19 +16,24 @@ module tb_scalar_mult;
     );
     
     always #5 clk = ~clk; // 10ns clock period
-    initial begin
-        $monitor("Time: %0t | X0: %h, Y0: %h, Z0: %h | X1: %h, Y1: %h, Z1: %h | o_done: %b",
-                 $time, uut.X0, uut.Y0, uut.Z0, uut.X1, uut.Y1, uut.Z1, o_done);
+    reg [7:0] bit_pos; // Assuming bit_pos is 8 bits, adjust size if needed
+
+    // Monitor bit_pos changes and display X0, Y0, Z0, X1, Y1, Z1
+    always @(uut.bit_pos) begin
+        $display("Time: %0t | bit_pos: %0d | X0: %h, Y0: %h, Z0: %h | X1: %h, Y1: %h, Z1: %h",
+                 $time, uut.bit_pos, uut.X0, uut.Y0, uut.Z0, uut.X1, uut.Y1, uut.Z1);
     end
+
     initial begin
         clk = 0; 
         rst_n = 0;
         start = 0;
-        k = 256'hd83715f87b79685cdc41927073554fa5d6ddc3d8e9327ee7ac9fc6a0eed765ed;
-        X = 256'h4b82bf5f6655ac6be5f66fc070f0f31838cb375027040d0ab1b5680c84f43127;
-        Y = 256'h01c08b7d0e94c0dcb7defda9224f53e61e47fe20ad2420a71de13d393f2b9399;
-        Z = 256'h1;
-        p = 256'hfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f;
+     k = 256'h43F86641A085AF50C1293D806FBFC66FF4FA3EFC54F91FEBB8A87F6A379DF8CF;
+X = 256'h981862A18D2F3391A5BD8ACB7DB6CE5EEEDBC2E38DF59600C6EC94DBB4A2D55B;
+Y = 256'hA82576ADB5EA5015343D863C9AA585FF8AD2B4FDF9D7A703F0CB6F69C92513C3;
+Z = 256'h0000000000000000000000000000000000000000000000000000000000000001;
+p = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
+
         
         #20 rst_n = 1;
         #20 start = 1;
@@ -40,7 +45,7 @@ module tb_scalar_mult;
         $display("Y_out = %h", Y_out);
         $display("Z_out = %h", Z_out);
        // $monitor("Time: %0t | X0: %h, Y0: %h, Z0: %h | X1: %h, Y1: %h, Z1: %h", $time, X0, Y0, Z0, X1, Y1, Z1);
-       
+       #2000;
         $finish;
     end
 endmodule
