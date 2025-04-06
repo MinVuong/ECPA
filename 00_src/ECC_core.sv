@@ -6,8 +6,9 @@ module ECC_core(
 	input logic [255:0] a,
 	input logic [255:0] b,
 	input logic [255:0] prime,
+	input logic [255:0] n,
 	//input logic [255:0] constant,
-	input logic [2:0] alu_sel,
+	input logic [2:0] ecc_sel,
 	output logic [255:0] alu_result,
 	output logic done
 	);
@@ -15,13 +16,23 @@ module ECC_core(
 //wire [255:0] b;
 //wire [255:0] constant;
 //wire [255:0] prime;
-//wire logic [2:0] alu_sel;
+//wire logic [2:0] ecc_sel ;
 //assign a = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF; // Giá trị a
 //assign b = 256'h0000000000000000000000000000000000000000000000000000000000000001; // Giá trị b
 //assign prime = 256'h0000000000000000000000000000000000000000000000000000000000001111;
 //assign constant = 256'h0000000000000000000000000000000000000000000000000000000000000002; // Giá trị constant
-    // Gán giá trị cho alu_sel
-//assign alu_sel = 3'b001; // Chọn phép toán cộng
+    // Gán giá trị cho ecc_sel 
+//assign ecc_sel  = 3'b001; // Chọn phép toán cộng
+
+logic [255:0] p_or_n; 
+// assign sel_parameter = 1'b0; // Chọn a, b, prime, constant
+always_comb begin
+	if (ecc_sel[0]) begin
+	p_or_n =n;
+	end else begin
+	p_or_n = prime;
+	end
+end	
 
 //wire
 logic start_add, start_sub, start_mult, start_inv;
@@ -42,7 +53,7 @@ modular_addition modular_addition(
 	.i_start(start_add),
 	.i_clk(i_clk),
 	.i_rst_n(rst_modular),
-	.p(prime), 
+	.p(p_or_n), 
 	.A(a), 
 	.B(b),
 	.result(result_add),
@@ -55,21 +66,24 @@ modular_subtractor modular_subtractor(
 	.i_rst_n(rst_modular),
 	.A(a),
 	.B(b),
-	.p(prime),
+	.p(p_or_n),
 	.result(result_sub),
 	.done(done_sub)
 );
-//modular multiplier
-mont_final modular_multiplier(
-	.clk(i_clk),
-	.rst_n(rst_modular),
-	.start(start_mult),
-	.A(a),
-	.B(b),
-	.P(prime),
-	.M(result_mult),
-	.done(done_mult)
+//modular multiplication
+
+modular_multiplication modular_multiplication(
+	.clk(i_clk), 
+	.rst_n(rst_modular), 
+	.start(start_mult), 
+	.a(a), 
+	.b(b), 
+	.m(p_or_n), 
+	.p(result_mult), 
+	.ready(done_mult)
 );
+
+
 //modular inversion c=m*a^-1
 modular_inversion modular_inversion(
 	.clk(i_clk), 
@@ -77,20 +91,20 @@ modular_inversion modular_inversion(
 	.start(start_inv), 
 	.b(b), 
 	.a(a), 
-	.m(prime), 
+	.m(p_or_n), 
 	.c(result_inv), 
-	.ready(done_inv), 
-	.busy(busy_inv), 
-	.ready0(ready0_inv)
+	.ready(done_inv) 
+//	.busy(busy_inv), 
+//	.ready0(ready0_inv)
 );
 // mux 4->1 
 always_comb begin
     if (done) begin
-        case (alu_sel)
-            3'b001: alu_result = result_add; 
-            3'b010: alu_result = result_sub;
-            3'b011: alu_result = result_mult;
-            3'b100: alu_result = result_inv;
+        case (ecc_sel[2:1])
+            2'b00: alu_result = result_add; 
+            2'b01: alu_result = result_sub;
+            2'b10: alu_result = result_mult;
+            2'b11: alu_result = result_inv;
             default: alu_result = 256'b0;
         endcase
     end else begin
@@ -108,12 +122,12 @@ always @(posedge i_clk)
 				case (state)
 				Idle: begin 
 					if (start) begin
-						case (alu_sel)
+						case (ecc_sel[2:1])
 							`ALU_ADD: state <= Add;
 							`ALU_SUB: state <= Sub;
 							`ALU_MULT: state <= Mult;
 							`ALU_INV: state <= Inversion;
-							`ALU_NOP: state <= Complete;
+					
 						endcase
 					end
 					else
@@ -223,7 +237,8 @@ end
 				start_inv = CLEAR;
 				reset = SET;
 				done = SET;
-			end
+				end
+				
 		endcase
 end
 

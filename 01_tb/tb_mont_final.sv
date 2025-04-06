@@ -1,18 +1,18 @@
-`timescale 1ns / 1ps
-
 module tb_mont_final;
 
-    // Testbench signals
+    // Inputs
     reg clk;
     reg rst_n;
     reg start;
     reg [255:0] A;
     reg [255:0] B;
     reg [255:0] P;
+
+    // Outputs
     wire [255:0] M;
     wire done;
 
-    // Instantiate the Montgomery module
+    // Instantiate the Unit Under Test (UUT)
     mont_final uut (
         .clk(clk),
         .rst_n(rst_n),
@@ -26,68 +26,62 @@ module tb_mont_final;
 
     // Clock generation
     initial begin
-        clk = 1;
-        forever #5 clk = ~clk; // 100MHz clock
+        clk = 0;
+        forever #5 clk = ~clk; // 10ns clock period
     end
 
     // Test sequence
     initial begin
-        // Initialize signals
+        // Initialize inputs
         rst_n = 0;
         start = 0;
         A = 0;
         B = 0;
-        P = 256'd101; // Prime number for all test cases
+        P = 0;
 
         // Apply reset
+        #20;
+        rst_n = 1;
+
+        // Test case 1
         #10;
-        rst_n = 1; // Release reset
-
-        // Test Case 1
-        
-        A = 256'd3;  B = 256'd5;
+        A = 256'h123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0;
+        B = 256'hFEDCBA9876543210FEDCBA9876543210FEDCBA9876543210FEDCBA9876543210;
+        P = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
         start = 1;
-        wait(done);
         
-        $display("Test Case 1: A = %h, B = %h, P = %h , M = %h", A, B, P, M);
-        start = 0;
 
-        // Test Case 2
+        // Wait for the operation to complete
+        wait(done);
+
+        // Display the result
+        $display("Test Case 1:");
+        $display("A = %h", A);
+        $display("B = %h", B);
+        $display("P = %h", P);
+        $display("M = %h", M);
+
+        // Test case 2
         #10;
-    
-        A = 256'd7;  B = 256'd11;
-        start = 1;
-        wait(done);
         start = 0;
-        $display("Test Case 2: A = %h, B = %h, P = %h , M = %h", A, B, P, M);
+        #10;
+        A = 256'h1;
+        B = 256'h2;
+        P = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
+        start = 1;
 
-        // Test Case 3
+        // Wait for the operation to complete
+        wait(done);
+
+        // Display the result
+        $display("Test Case 2:");
+        $display("A = %h", A);
+        $display("B = %h", B);
+        $display("P = %h", P);
+        $display("M = %h", M);
+
+        // Finish simulation
         #100;
-    
-        A = 256'd13; B = 256'd17;
-        start = 1;
-        wait(done);
-        start = 0;
-        $display("Test Case 3: A = %h, B = %h, P = %h , M = %h", A, B, P, M);
-
-        // Test Case 4
-        #100;
-      
-        A = 256'd19; B = 256'd23;
-        start = 1;
-        wait(done);
-        start = 0;
-        $display("Test Case 4: A = %h, B = %h, P = %h , M = %h", A, B, P, M);
-
-        // Test Case 5
-        #100;
-    
-        A = 256'd29; B = 256'd31;
-        start = 1;
-        wait(done);
-        start = 0;
-        $display("Test Case 5: A = %h, B = %h, P = %h , M = %h", A, B, P, M);
-
         $finish;
     end
 

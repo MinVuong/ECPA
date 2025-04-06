@@ -90,12 +90,12 @@ end
 
 
 
-    csa_256 csa1 (
+    cla_256 cla1 (
       
         .a({255'b0,cin_adder_1}),
         .b(sin_adder_1),
-        .c(mul_in_adder_1),
-        .s(sout_adder_1),
+        .cin(mul_in_adder_1),
+        .sum(sout_adder_1),
         .cout(cout_adder_1)
       
     );
@@ -108,12 +108,12 @@ end
 
 
 
-    csa_256 csa2 (
+    cla_256 cla2 (
       
         .a({255'b0,cin_adder_2}),
         .b(sin_adder_2),
-        .c(mul_in_adder_2),
-        .s(sout_adder_2),
+        .cin(mul_in_adder_2),
+        .sum(sout_adder_2),
         .cout(cout_adder_2)
     
     );

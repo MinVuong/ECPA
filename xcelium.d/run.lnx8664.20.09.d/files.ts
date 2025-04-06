@@ -20,3 +20,14 @@
 1743823643 /home/admin/shared/ECDSA/01_tb/tb_ECPD.sv
 1743318835 /home/admin/shared/ECDSA/01_tb/tb_modular_addition.sv
 1743821015 /home/admin/shared/ECDSA/01_tb/tb_modular_subtractor.sv
+1743843290 /home/admin/shared/ECDSA/00_src/cla_32.sv
+1743843262 /home/admin/shared/ECDSA/00_src/cla_256.sv
+1743843360 /home/admin/shared/ECDSA/01_tb/tb_cla_256.sv
+1743844076 /home/admin/shared/ECDSA/00_src/montgomery.sv
+1743844288 /home/admin/shared/ECDSA/00_src/mont_final.sv
+1743850921 /home/admin/shared/ECDSA/01_tb/tb_mont_final.sv
+1743849971 /home/admin/shared/ECDSA/00_src/regfile.sv
+1743915000 /home/admin/shared/ECDSA/01_tb/tb_regfile.sv
+1743916887 /home/admin/shared/ECDSA/00_src/ECC_core.sv
+1743917133 /home/admin/shared/ECDSA/01_tb/tb_ECC_core.sv
+1743913913 /home/admin/shared/ECDSA/00_src/constant.sv

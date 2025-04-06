@@ -10,7 +10,7 @@ syn: clean
 	genus -f ./03_synth/genus_shell.tcl
 ##################################################
 #GUI = -gui
-tb_file := 01_tb/tb_scalar_mult.sv
+tb_file := 01_tb/tb_ECC_core.sv
 
 PHONY: sim
 sim:
@@ -25,7 +25,7 @@ sim:
 delay_mode := -delay_mode punit
 #sdf_file := -sdf_cmd_file 03_synth/sdf.cmd 
 netlist := 03_synth/*_gate.v
-test_file := 01_tb/tb_scalar_mult.sv+
+test_file := 01_tb/tb_ECC_core.sv+
 
 PHONY: verify
 verify:
