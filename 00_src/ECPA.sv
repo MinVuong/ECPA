@@ -394,7 +394,8 @@ end
 	.result(R_SQ_ADD_G),
 	.done(done_R_SQ_ADD_G)
 );
-  assign done_stage6 = done_twoV&done_R_SQ_ADD_G;
+  assign done_stage6 = done_twoV ;//&done_R_SQ_ADD_G; 
+  // ban đầu để phép and 2 cái thì đúng. Nhma hq có chỉnh addition. nếu chỉnh như vầy thì có vấn đề gì thì xem lại.
 
 //-----------------------------------------------//
 // Stage 7

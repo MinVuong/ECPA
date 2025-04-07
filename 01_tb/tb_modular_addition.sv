@@ -20,6 +20,9 @@ module tb_modular_addition;
         .result(result),
         .done(done)
     );
+    initial begin
+    $monitor("Time: %0t | done: %b | result: %h", $time, done, result);
+end
 
     // Clock generation
     always #5 i_clk = ~i_clk;
@@ -44,19 +47,27 @@ module tb_modular_addition;
         
         wait(done);
         $display("Test 1: result = %h", result);
-        #500 i_start = 0;
-          i_rst_n = 0;
-         #10;
-         i_rst_n =1;
+        i_start = 0;
+        //i_rst_n=0;
+        
+       //  i_rst_n = 0;
+        // i_rst_n =1;
         // Test case 2: A + B > p (should wrap around modulo p)
         A = 256'hff;
         B = 256'h20;
         p = 256'h100;
         #10 i_start = 1;
+        //i_rst_n=1;  
+     
        
         wait(done);
         $display("Test 2: result = %h", result);
-         #500 i_start = 0;
+        i_start = 0;
+        //i_rst_n=0;
+            // i_rst_n = 0;
+            #10;
+        /*
+          i_start = 0;
          i_rst_n = 0;
          #10;
          i_rst_n =1;
@@ -68,13 +79,12 @@ module tb_modular_addition;
         
         wait(done);
         $display("Test 3: result = %h", result);
-        #500 i_start = 0;
+         i_start = 0;
           i_rst_n = 0;
          #10;
-         i_rst_n =1;
-        
+         i_rst_n =1;*/
         // End simulation
-        #50;
+        #500000;
         $finish;
     end
 endmodule

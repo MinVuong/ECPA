@@ -8,7 +8,7 @@
 .sv
 -f
 00_src/flist.f
-01_tb/tb_ECC_core.sv
+01_tb/tb_ECC_top.sv
 -timescale
 1ns/10ps
 +access+rcw

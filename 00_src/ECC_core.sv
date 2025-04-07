@@ -1,4 +1,5 @@
 
+// 
 module ECC_core(
 	input logic start,
 	input logic i_clk,
@@ -7,7 +8,6 @@ module ECC_core(
 	input logic [255:0] b,
 	input logic [255:0] prime,
 	input logic [255:0] n,
-	//input logic [255:0] constant,
 	input logic [2:0] ecc_sel,
 	output logic [255:0] alu_result,
 	output logic done
@@ -43,7 +43,7 @@ logic rst_modular;
 logic reset; // reset by state_machine
 assign rst_modular = i_rst_n&reset;
 //logic [255:0] prime;
-//localparam
+//localparamSS
 localparam CLEAR = 1'b0;
 localparam SET = 1'b1;
 logic start_mult_delay;

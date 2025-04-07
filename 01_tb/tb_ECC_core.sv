@@ -61,7 +61,7 @@ module tb_ECC_core;
 
         // Wait for the operation to complete
         wait(done);
-        
+      //  i_rst_n = 0;
         start = 0;
         $display("Test Case 1: ADD");
         $display("a = %h, b = %h, prime = %h, result = %h", a, b, prime, alu_result);
@@ -74,12 +74,14 @@ module tb_ECC_core;
         n=256'hFF45;
         ecc_sel = 3'b010; // SUB
         start = 1;
+        i_rst_n = 1;
         
     
 
         // Wait for the operation to complete
         wait(done);
         start = 0;
+        //i_rst_n = 0;
         $display("Test Case 2: SUB");
         $display("a = %h, b = %h, prime = %h, result = %h", a, b, prime, alu_result);
 
@@ -91,8 +93,10 @@ module tb_ECC_core;
         prime = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC5;
         ecc_sel = 3'b011; // MULT
         start = 1;
+        i_rst_n = 1;
         #10;
         start = 0;
+        //i_rst_n = 0;
 
         // Wait for the operation to complete
         wait(done);
@@ -107,12 +111,14 @@ module tb_ECC_core;
         n=256'hFF45;
         ecc_sel = 3'b100; // INV
         start = 1;
+        i_rst_n = 1;
        
         
 
         // Wait for the operation to complete
         wait(done);
         start = 0;
+        //i_rst_n = 0;
         $display("Test Case 4: INV");
         $display("a = %h, b = %h, prime = %h, result = %h", a, b, prime, alu_result);
 

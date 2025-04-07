@@ -41,19 +41,18 @@ module regfile (
         // Xử lý các trường hợp đọc dựa trên ecc_control và wb_wren
         if (!wb_wren) begin
             case (ecc_control)
-                2'b00: begin
+                2'b10: begin
                     rs1x_data = memory[rs1_addr];
                     rs2x_data = memory[rs2_addr];
                 end
                 2'b01: begin
                     rs1x_data = memory[rs1_addr];
-                    rs1y_data = memory[rs1_addr + 5'd1];
-                    rs1z_data = memory[rs1_addr + 5'd2];
+
                     rs2x_data = memory[rs2_addr];
                     rs2y_data = memory[rs2_addr + 5'd1];
                     rs2z_data = memory[rs2_addr + 5'd2];
                 end
-                2'b10: begin
+                2'b00: begin
                     rs1x_data = memory[rs1_addr];
                     rs2x_data = memory[rs2_addr];
                     rs2y_data = memory[rs2_addr + 5'd1];
@@ -76,12 +75,12 @@ module regfile (
         if (!i_rst_n) begin
             // Reset: gán giá trị ban đầu cho các thanh ghi
             memory[0] <= 256'd0;     // Thanh ghi 0 luôn là 0
-            memory[1] <= 256'd1;     // Thanh ghi 1 = 1
-            memory[2] <= 256'd2;     // Thanh ghi 2 = 2
-            memory[3] <= 256'd3;     // Thanh ghi 3 = 3
-            memory[4] <= 256'd4;     // Thanh ghi 4 = 4
-            memory[5] <= 256'd5;     // Thanh ghi 5 = 5
-            memory[6] <= 256'd6;     // Thanh ghi 6 = 6
+            memory[1] <= 256'hd7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592;     // Thanh ghi 1 = hash_m
+            memory[2] <= 256'h43F86641A085AF50C1293D806FBFC66FF4FA3EFC54F91FEBB8A87F6A379DF8CF;     // Thanh ghi 2 = k 
+            memory[3] <= 256'h3E9F128209B8F412C2874E2F6656446BE30138B748B9E18401EE9BABC5CE923F;     // Thanh ghi 3 = d 
+            memory[4] <= 256'h79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798;     // Thanh ghi 4 = Xg
+            memory[5] <= 256'h483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8;     // Thanh ghi 5 = yg
+            memory[6] <= 256'h1;     // Thanh ghi 6 = zg
             // Đặt các thanh ghi còn lại (7 đến 31) về 0
             for (int i = 7; i < 32; i = i + 1) begin
                 memory[i] <= 256'd0;
@@ -99,6 +98,7 @@ module regfile (
                     memory[wb_addr] <= wb_data_1;
                     memory[wb_addr + 5'd1] <= wb_data_2;
                     memory[wb_addr + 5'd2] <= wb_data_3;
+                 
                 end
                 2'b10: begin
                     memory[wb_addr] <= wb_data_1;

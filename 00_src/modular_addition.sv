@@ -65,8 +65,11 @@ end
 always_ff @(posedge i_clk or negedge i_rst_n) begin
     if (!i_rst_n)
         done_reg <= 1'b0;
-    else if (BKA2_done)
-        done_reg <= 1'b1;
+    else if (BKA2_done) begin 
+         done_reg <= 1'b1;
+         if (!i_start) // Reset done when i_start is low
+            done_reg <= 1'b0;
+            end
     else 
         done_reg <= 1'b0;
 end

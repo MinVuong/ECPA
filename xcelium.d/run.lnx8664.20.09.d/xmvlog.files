@@ -12,5 +12,16 @@
 /home/admin/shared/ECDSA/00_src/modular_multiplication.sv
 /home/admin/shared/ECDSA/00_src/modular_inversion.sv
 /home/admin/shared/ECDSA/00_src/constant.sv
+/home/admin/shared/ECDSA/00_src/ECPM.sv
+/home/admin/shared/ECDSA/00_src/ECPA.sv
+/home/admin/shared/ECDSA/00_src/ECPD.sv
 /home/admin/shared/ECDSA/00_src/ECC_core.sv
-/home/admin/shared/ECDSA/01_tb/tb_ECC_core.sv
+/home/admin/shared/ECDSA/00_src/ECC_top.sv
+/home/admin/shared/ECDSA/00_src/constant.sv
+/home/admin/shared/ECDSA/00_src/regfile.sv
+/home/admin/shared/ECDSA/00_src/control_unit.sv
+/home/admin/shared/ECDSA/00_src/pc.sv
+/home/admin/shared/ECDSA/00_src/pc_4.sv
+/home/admin/shared/ECDSA/00_src/IMEM.sv
+/home/admin/shared/ECDSA/00_src/MUX_wb.sv
+/home/admin/shared/ECDSA/01_tb/tb_ECC_top.sv
