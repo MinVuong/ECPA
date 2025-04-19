@@ -30,7 +30,7 @@ module control_unit (
     // Internal signals
     reg [6:0] opcode;
     reg [2:0] funct3;
-    reg [4:0] rs1, rs2, rd;          // Unused in current logic, kept for completeness
+   // reg [4:0] rs1, rs2, rd;          // Unused in current logic, kept for completeness
    // reg [2:0] ecc_control;           // ECC control signal
     wire done_EXECUTE;               // Combinational signal for completion
     assign done_EXECUTE = done_ECPM | done_ECC_core | done_ECPA;
@@ -95,7 +95,7 @@ module control_unit (
                     3'b110: begin start_ECC_core = 1; ecc_control = `MODULO; end      // MODULO
                     3'b001: begin start_ECPM     = 1; ecc_control = `MULSCL; end       // MULSCL
                     3'b100: begin start_ECPM     = 1; ecc_control = `MULSCLX; end       // MULSCLX
-                    3'b101: begin start_ECPA     = 1; ecc_control = `ADD_SCLX; end     // ADD_SCLX
+                    3'b111: begin start_ECPA     = 1; ecc_control = `ADD_SCLX; end     // ADD_SCLX
                     default: begin start_ECC_core = 1; ecc_control = `MODULO; end // Default case
                 endcase
                 if (done_EXECUTE)
@@ -111,7 +111,7 @@ module control_unit (
                     3'b110: begin ecc_control = `MODULO; wb_sel = `SEL_ECC_CORE; end   // MODULO
                     3'b001: begin ecc_control = `MULSCL; wb_sel = `SEL_ECPM; end   // MULSCL
                     3'b100: begin ecc_control = `MULSCLX; wb_sel = `SEL_ECPM; end // MULSCLX
-                    3'b101: begin ecc_control = `ADD_SCLX; wb_sel = `SEL_ECPA; end // ADD_SCLX
+                    3'b111: begin ecc_control = `ADD_SCLX; wb_sel = `SEL_ECPA; end // ADD_SCLX
                     default: begin ecc_control = `MODULO; wb_sel = `SEL_ECC_CORE; end
                 endcase
                 next_state = DONE;

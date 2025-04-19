@@ -1,0 +1,1798 @@
+Montgomery Ladder Scalar Multiplication Steps:
+Scalar k (binary, 256-bit): 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001101
+Base Point P (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 1 (bit=0, bit_position=255):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 1:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 2 (bit=0, bit_position=254):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 2:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 3 (bit=0, bit_position=253):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 3:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 4 (bit=0, bit_position=252):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 4:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 5 (bit=0, bit_position=251):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 5:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 6 (bit=0, bit_position=250):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 6:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 7 (bit=0, bit_position=249):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 7:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 8 (bit=0, bit_position=248):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 8:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 9 (bit=0, bit_position=247):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 9:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 10 (bit=0, bit_position=246):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 10:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 11 (bit=0, bit_position=245):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 11:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 12 (bit=0, bit_position=244):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 12:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 13 (bit=0, bit_position=243):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 13:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 14 (bit=0, bit_position=242):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 14:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 15 (bit=0, bit_position=241):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 15:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 16 (bit=0, bit_position=240):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 16:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 17 (bit=0, bit_position=239):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 17:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 18 (bit=0, bit_position=238):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 18:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 19 (bit=0, bit_position=237):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 19:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 20 (bit=0, bit_position=236):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 20:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 21 (bit=0, bit_position=235):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 21:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 22 (bit=0, bit_position=234):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 22:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 23 (bit=0, bit_position=233):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 23:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 24 (bit=0, bit_position=232):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 24:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 25 (bit=0, bit_position=231):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 25:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 26 (bit=0, bit_position=230):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 26:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 27 (bit=0, bit_position=229):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 27:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 28 (bit=0, bit_position=228):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 28:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 29 (bit=0, bit_position=227):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 29:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 30 (bit=0, bit_position=226):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 30:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 31 (bit=0, bit_position=225):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 31:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 32 (bit=0, bit_position=224):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 32:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 33 (bit=0, bit_position=223):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 33:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 34 (bit=0, bit_position=222):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 34:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 35 (bit=0, bit_position=221):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 35:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 36 (bit=0, bit_position=220):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 36:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 37 (bit=0, bit_position=219):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 37:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 38 (bit=0, bit_position=218):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 38:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 39 (bit=0, bit_position=217):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 39:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 40 (bit=0, bit_position=216):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 40:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 41 (bit=0, bit_position=215):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 41:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 42 (bit=0, bit_position=214):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 42:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 43 (bit=0, bit_position=213):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 43:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 44 (bit=0, bit_position=212):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 44:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 45 (bit=0, bit_position=211):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 45:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 46 (bit=0, bit_position=210):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 46:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 47 (bit=0, bit_position=209):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 47:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 48 (bit=0, bit_position=208):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 48:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 49 (bit=0, bit_position=207):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 49:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 50 (bit=0, bit_position=206):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 50:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 51 (bit=0, bit_position=205):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 51:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 52 (bit=0, bit_position=204):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 52:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 53 (bit=0, bit_position=203):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 53:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 54 (bit=0, bit_position=202):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 54:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 55 (bit=0, bit_position=201):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 55:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 56 (bit=0, bit_position=200):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 56:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 57 (bit=0, bit_position=199):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 57:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 58 (bit=0, bit_position=198):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 58:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 59 (bit=0, bit_position=197):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 59:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 60 (bit=0, bit_position=196):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 60:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 61 (bit=0, bit_position=195):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 61:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 62 (bit=0, bit_position=194):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 62:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 63 (bit=0, bit_position=193):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 63:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 64 (bit=0, bit_position=192):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 64:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 65 (bit=0, bit_position=191):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 65:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 66 (bit=0, bit_position=190):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 66:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 67 (bit=0, bit_position=189):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 67:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 68 (bit=0, bit_position=188):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 68:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 69 (bit=0, bit_position=187):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 69:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 70 (bit=0, bit_position=186):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 70:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 71 (bit=0, bit_position=185):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 71:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 72 (bit=0, bit_position=184):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 72:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 73 (bit=0, bit_position=183):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 73:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 74 (bit=0, bit_position=182):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 74:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 75 (bit=0, bit_position=181):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 75:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 76 (bit=0, bit_position=180):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 76:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 77 (bit=0, bit_position=179):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 77:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 78 (bit=0, bit_position=178):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 78:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 79 (bit=0, bit_position=177):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 79:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 80 (bit=0, bit_position=176):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 80:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 81 (bit=0, bit_position=175):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 81:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 82 (bit=0, bit_position=174):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 82:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 83 (bit=0, bit_position=173):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 83:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 84 (bit=0, bit_position=172):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 84:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 85 (bit=0, bit_position=171):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 85:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 86 (bit=0, bit_position=170):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 86:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 87 (bit=0, bit_position=169):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 87:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 88 (bit=0, bit_position=168):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 88:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 89 (bit=0, bit_position=167):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 89:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 90 (bit=0, bit_position=166):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 90:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 91 (bit=0, bit_position=165):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 91:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 92 (bit=0, bit_position=164):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 92:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 93 (bit=0, bit_position=163):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 93:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 94 (bit=0, bit_position=162):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 94:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 95 (bit=0, bit_position=161):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 95:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 96 (bit=0, bit_position=160):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 96:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 97 (bit=0, bit_position=159):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 97:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 98 (bit=0, bit_position=158):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 98:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 99 (bit=0, bit_position=157):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 99:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 100 (bit=0, bit_position=156):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 100:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 101 (bit=0, bit_position=155):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 101:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 102 (bit=0, bit_position=154):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 102:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 103 (bit=0, bit_position=153):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 103:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 104 (bit=0, bit_position=152):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 104:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 105 (bit=0, bit_position=151):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 105:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 106 (bit=0, bit_position=150):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 106:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 107 (bit=0, bit_position=149):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 107:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 108 (bit=0, bit_position=148):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 108:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 109 (bit=0, bit_position=147):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 109:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 110 (bit=0, bit_position=146):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 110:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 111 (bit=0, bit_position=145):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 111:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 112 (bit=0, bit_position=144):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 112:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 113 (bit=0, bit_position=143):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 113:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 114 (bit=0, bit_position=142):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 114:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 115 (bit=0, bit_position=141):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 115:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 116 (bit=0, bit_position=140):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 116:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 117 (bit=0, bit_position=139):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 117:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 118 (bit=0, bit_position=138):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 118:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 119 (bit=0, bit_position=137):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 119:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 120 (bit=0, bit_position=136):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 120:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 121 (bit=0, bit_position=135):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 121:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 122 (bit=0, bit_position=134):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 122:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 123 (bit=0, bit_position=133):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 123:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 124 (bit=0, bit_position=132):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 124:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 125 (bit=0, bit_position=131):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 125:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 126 (bit=0, bit_position=130):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 126:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 127 (bit=0, bit_position=129):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 127:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 128 (bit=0, bit_position=128):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 128:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 129 (bit=0, bit_position=127):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 129:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 130 (bit=0, bit_position=126):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 130:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 131 (bit=0, bit_position=125):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 131:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 132 (bit=0, bit_position=124):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 132:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 133 (bit=0, bit_position=123):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 133:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 134 (bit=0, bit_position=122):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 134:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 135 (bit=0, bit_position=121):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 135:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 136 (bit=0, bit_position=120):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 136:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 137 (bit=0, bit_position=119):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 137:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 138 (bit=0, bit_position=118):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 138:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 139 (bit=0, bit_position=117):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 139:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 140 (bit=0, bit_position=116):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 140:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 141 (bit=0, bit_position=115):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 141:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 142 (bit=0, bit_position=114):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 142:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 143 (bit=0, bit_position=113):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 143:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 144 (bit=0, bit_position=112):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 144:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 145 (bit=0, bit_position=111):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 145:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 146 (bit=0, bit_position=110):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 146:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 147 (bit=0, bit_position=109):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 147:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 148 (bit=0, bit_position=108):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 148:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 149 (bit=0, bit_position=107):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 149:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 150 (bit=0, bit_position=106):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 150:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 151 (bit=0, bit_position=105):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 151:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 152 (bit=0, bit_position=104):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 152:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 153 (bit=0, bit_position=103):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 153:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 154 (bit=0, bit_position=102):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 154:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 155 (bit=0, bit_position=101):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 155:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 156 (bit=0, bit_position=100):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 156:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 157 (bit=0, bit_position=99):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 157:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 158 (bit=0, bit_position=98):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 158:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 159 (bit=0, bit_position=97):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 159:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 160 (bit=0, bit_position=96):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 160:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 161 (bit=0, bit_position=95):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 161:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 162 (bit=0, bit_position=94):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 162:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 163 (bit=0, bit_position=93):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 163:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 164 (bit=0, bit_position=92):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 164:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 165 (bit=0, bit_position=91):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 165:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 166 (bit=0, bit_position=90):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 166:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 167 (bit=0, bit_position=89):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 167:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 168 (bit=0, bit_position=88):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 168:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 169 (bit=0, bit_position=87):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 169:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 170 (bit=0, bit_position=86):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 170:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 171 (bit=0, bit_position=85):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 171:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 172 (bit=0, bit_position=84):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 172:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 173 (bit=0, bit_position=83):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 173:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 174 (bit=0, bit_position=82):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 174:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 175 (bit=0, bit_position=81):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 175:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 176 (bit=0, bit_position=80):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 176:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 177 (bit=0, bit_position=79):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 177:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 178 (bit=0, bit_position=78):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 178:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 179 (bit=0, bit_position=77):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 179:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 180 (bit=0, bit_position=76):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 180:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 181 (bit=0, bit_position=75):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 181:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 182 (bit=0, bit_position=74):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 182:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 183 (bit=0, bit_position=73):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 183:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 184 (bit=0, bit_position=72):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 184:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 185 (bit=0, bit_position=71):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 185:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 186 (bit=0, bit_position=70):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 186:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 187 (bit=0, bit_position=69):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 187:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 188 (bit=0, bit_position=68):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 188:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 189 (bit=0, bit_position=67):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 189:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 190 (bit=0, bit_position=66):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 190:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 191 (bit=0, bit_position=65):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 191:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 192 (bit=0, bit_position=64):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 192:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 193 (bit=0, bit_position=63):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 193:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 194 (bit=0, bit_position=62):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 194:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 195 (bit=0, bit_position=61):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 195:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 196 (bit=0, bit_position=60):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 196:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 197 (bit=0, bit_position=59):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 197:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 198 (bit=0, bit_position=58):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 198:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 199 (bit=0, bit_position=57):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 199:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 200 (bit=0, bit_position=56):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 200:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 201 (bit=0, bit_position=55):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 201:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 202 (bit=0, bit_position=54):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 202:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 203 (bit=0, bit_position=53):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 203:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 204 (bit=0, bit_position=52):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 204:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 205 (bit=0, bit_position=51):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 205:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 206 (bit=0, bit_position=50):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 206:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 207 (bit=0, bit_position=49):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 207:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 208 (bit=0, bit_position=48):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 208:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 209 (bit=0, bit_position=47):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 209:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 210 (bit=0, bit_position=46):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 210:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 211 (bit=0, bit_position=45):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 211:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 212 (bit=0, bit_position=44):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 212:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 213 (bit=0, bit_position=43):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 213:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 214 (bit=0, bit_position=42):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 214:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 215 (bit=0, bit_position=41):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 215:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 216 (bit=0, bit_position=40):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 216:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 217 (bit=0, bit_position=39):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 217:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 218 (bit=0, bit_position=38):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 218:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 219 (bit=0, bit_position=37):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 219:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 220 (bit=0, bit_position=36):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 220:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 221 (bit=0, bit_position=35):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 221:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 222 (bit=0, bit_position=34):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 222:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 223 (bit=0, bit_position=33):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 223:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 224 (bit=0, bit_position=32):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 224:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 225 (bit=0, bit_position=31):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 225:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 226 (bit=0, bit_position=30):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 226:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 227 (bit=0, bit_position=29):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 227:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 228 (bit=0, bit_position=28):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 228:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 229 (bit=0, bit_position=27):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 229:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 230 (bit=0, bit_position=26):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 230:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 231 (bit=0, bit_position=25):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 231:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 232 (bit=0, bit_position=24):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 232:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 233 (bit=0, bit_position=23):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 233:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 234 (bit=0, bit_position=22):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 234:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 235 (bit=0, bit_position=21):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 235:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 236 (bit=0, bit_position=20):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 236:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 237 (bit=0, bit_position=19):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 237:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 238 (bit=0, bit_position=18):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 238:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 239 (bit=0, bit_position=17):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 239:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 240 (bit=0, bit_position=16):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 240:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 241 (bit=0, bit_position=15):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 241:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 242 (bit=0, bit_position=14):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 242:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 243 (bit=0, bit_position=13):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 243:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 244 (bit=0, bit_position=12):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 244:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 245 (bit=0, bit_position=11):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 245:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 246 (bit=0, bit_position=10):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 246:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 247 (bit=0, bit_position=9):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 247:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 248 (bit=0, bit_position=8):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 248:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 249 (bit=0, bit_position=7):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 249:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 250 (bit=0, bit_position=6):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 250:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 251 (bit=0, bit_position=5):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 251:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 252 (bit=0, bit_position=4):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 252:
+    R0 (Jacobian): Infinity
+    R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+
+Step 253 (bit=1, bit_position=3):
+  R0 (Jacobian): Infinity
+  R1 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  After Step 253:
+    R0 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+    R1 (Jacobian): X=0x755544783919faf088ba4d974a31f4483e0284902b90710afb9936b9ba3696f1, Y=0x452c505bf4baa22941578ae1e673e3856b2ff14ad14ec1de3cd8678986beb88e, Z=0x187b4d0bdfc28e142144e2b7df948e970631899dc6f161a8e57859409385c02b
+
+Step 254 (bit=1, bit_position=2):
+  R0 (Jacobian): X=0xadc60c6eb52ab37ff799bf51f3071c3664a14bedd50daa748c9f951823892185, Y=0x8c3da685efe1470a10a2715befca474b8318c4cee378b0d472bc2c9fc9c2de2d, Z=0x1
+  R1 (Jacobian): X=0x755544783919faf088ba4d974a31f4483e0284902b90710afb9936b9ba3696f1, Y=0x452c505bf4baa22941578ae1e673e3856b2ff14ad14ec1de3cd8678986beb88e, Z=0x187b4d0bdfc28e142144e2b7df948e970631899dc6f161a8e57859409385c02b
+  After Step 254:
+    R0 (Jacobian): X=0x8c5410532bd4c92093edfa03fc81a38db855a26825edd20bc29ab502bc7576d3, Y=0xd66c9b1354bf9c08f4caa616280c67250888f35ae5aaa7b2a4dfd3f92ec15c01, Z=0xf10d1a1f05ab796050d90467b077fe7d061304dd3a36b32dcc652fdc54e93cbf
+    R1 (Jacobian): X=0xf343df9f303830c563ffe9d7b199619d2a3be2313210873466172b081ccc08a3, Y=0x4f76f38648b00c6abbede8e9a094c9a4c3e0701ef5a90b1d134ae6c1b3ea9e50, Z=0xd671a2608a030a4a607eb7e7e94d20b49d7d296bad39df5e09f603c54eb1c6cd
+
+Step 255 (bit=0, bit_position=1):
+  R0 (Jacobian): X=0x8c5410532bd4c92093edfa03fc81a38db855a26825edd20bc29ab502bc7576d3, Y=0xd66c9b1354bf9c08f4caa616280c67250888f35ae5aaa7b2a4dfd3f92ec15c01, Z=0xf10d1a1f05ab796050d90467b077fe7d061304dd3a36b32dcc652fdc54e93cbf
+  R1 (Jacobian): X=0xf343df9f303830c563ffe9d7b199619d2a3be2313210873466172b081ccc08a3, Y=0x4f76f38648b00c6abbede8e9a094c9a4c3e0701ef5a90b1d134ae6c1b3ea9e50, Z=0xd671a2608a030a4a607eb7e7e94d20b49d7d296bad39df5e09f603c54eb1c6cd
+  After Step 255:
+    R0 (Jacobian): X=0x6bda7dd80f34e82cf430f533d0e6d3dd612eafd898cbb40106f2788a75e3d40e, Y=0xec3ab4122c09b2264414f71ef101d60982fa7ec110c1ee63f770f3d07ae474c6, Z=0x1095237c09e5dd1fc631b3f4c6657a52092a3abc95c05f6b528c3f92289dd8f6
+    R1 (Jacobian): X=0x125634c0fbbbfbf610cd152efc46ad70c2b64d16229664a1a8b808d0ae646a62, Y=0x5a7123e161d2fcf62833f46a7d6f349ac6b3b52027411d2edc62627c6dfece31, Z=0xfd6195f9788918b05760b322b28b4e343b12d225a76c7e34730ec8385f673b56
+
+Step 256 (bit=1, bit_position=0):
+  R0 (Jacobian): X=0x6bda7dd80f34e82cf430f533d0e6d3dd612eafd898cbb40106f2788a75e3d40e, Y=0xec3ab4122c09b2264414f71ef101d60982fa7ec110c1ee63f770f3d07ae474c6, Z=0x1095237c09e5dd1fc631b3f4c6657a52092a3abc95c05f6b528c3f92289dd8f6
+  R1 (Jacobian): X=0x125634c0fbbbfbf610cd152efc46ad70c2b64d16229664a1a8b808d0ae646a62, Y=0x5a7123e161d2fcf62833f46a7d6f349ac6b3b52027411d2edc62627c6dfece31, Z=0xfd6195f9788918b05760b322b28b4e343b12d225a76c7e34730ec8385f673b56
+  After Step 256:
+    R0 (Jacobian): X=0x63303ef4845fb7197021b05beb534452eb6af3197c4fd5d2f8709461388ef4fe, Y=0x88531005b395868dcb68a75cef35abccbd0f572da86069f9b1c020df46a03d41, Z=0x5c7a778c70e84f23b4d1313d5ca1be6d504b1835a440a7d07141d9c6c456acfa
+    R1 (Jacobian): X=0x3a70d0b478757ec4f46d689ca57fb8c36ef170c88942493eed1c071193a67ed6, Y=0x5f5734682e1b88a217d77506ab85e0297f8834223c044495344daa1a43109d3a, Z=0x6fdd68b074314cb3def63b5c3d5f982fd80efbe761bd71718b5504c9050898fa
+
+Final Result:
+  R0 (Jacobian): X=0x63303ef4845fb7197021b05beb534452eb6af3197c4fd5d2f8709461388ef4fe, Y=0x88531005b395868dcb68a75cef35abccbd0f572da86069f9b1c020df46a03d41, Z=0x5c7a778c70e84f23b4d1313d5ca1be6d504b1835a440a7d07141d9c6c456acfa

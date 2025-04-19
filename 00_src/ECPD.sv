@@ -253,7 +253,7 @@ always_ff @(posedge i_clk or posedge i_rst_n) begin
             stage5_start <= 1'b1; // Set stage5_start to 1 when start_stage5 is high
         end
     end
-//M^2 - 2S
+//S-X3
 modular_subtractor sub50(
 	.i_start(stage5_start),
 	.i_clk(i_clk),
@@ -312,7 +312,7 @@ always_ff @(posedge i_clk or posedge i_rst_n) begin
         end
     end
 
-//M*(S-X3)
+//Y3 = M*(S-X3) - 8Y1^4
 modular_subtractor sub70(
     .i_clk   (i_clk),
     .i_rst_n (i_rst_n),

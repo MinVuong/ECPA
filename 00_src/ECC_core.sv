@@ -12,20 +12,9 @@ module ECC_core(
 	output logic [255:0] alu_result,
 	output logic done
 	);
-//wire [255:0] a;
-//wire [255:0] b;
-//wire [255:0] constant;
-//wire [255:0] prime;
-//wire logic [2:0] ecc_sel ;
-//assign a = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF; // Giá trị a
-//assign b = 256'h0000000000000000000000000000000000000000000000000000000000000001; // Giá trị b
-//assign prime = 256'h0000000000000000000000000000000000000000000000000000000000001111;
-//assign constant = 256'h0000000000000000000000000000000000000000000000000000000000000002; // Giá trị constant
-    // Gán giá trị cho ecc_sel 
-//assign ecc_sel  = 3'b001; // Chọn phép toán cộng
 
+//chon p va n
 logic [255:0] p_or_n; 
-// assign sel_parameter = 1'b0; // Chọn a, b, prime, constant
 always_comb begin
 	if (ecc_sel[0]) begin
 	p_or_n =n;
@@ -41,12 +30,13 @@ logic done_add, done_sub, done_mult, done_inv;
 logic busy_inv, ready0_inv;
 logic rst_modular;
 logic reset; // reset by state_machine
-assign rst_modular = i_rst_n&reset;
-//logic [255:0] prime;
+assign rst_modular = ~i_rst_n || reset; //rst_modular = i_rst_n&reset;
 //localparamSS
 localparam CLEAR = 1'b0;
 localparam SET = 1'b1;
 logic start_mult_delay;
+
+
 
 //module addition
 modular_addition modular_addition(
@@ -89,13 +79,12 @@ modular_inversion modular_inversion(
 	.clk(i_clk), 
 	.rst_n(rst_modular), 
 	.start(start_inv), 
-	.b(b), 
-	.a(a), 
+	.b(a), 
+	.a(b), 
 	.m(p_or_n), 
 	.c(result_inv), 
 	.ready(done_inv) 
-//	.busy(busy_inv), 
-//	.ready0(ready0_inv)
+
 );
 // mux 4->1 
 always_comb begin
@@ -112,7 +101,10 @@ always_comb begin
     end
 end
 
-enum logic[2:0] {Idle = 3'b000, Add = 3'b001, Sub = 3'b010, Mult = 3'b011, Inversion = 3'b100, Inversion1 = 3'b101, Complete = 3'b111 } state = Idle;
+enum logic[3:0] {Idle = 4'b0000, Add = 4'b0001, Sub = 4'b0010, Mult = 4'b0011, Inversion = 4'b0100,  Complete = 4'b0111, Complete_wait = 4'b1000 } state = Idle;
+
+
+
 //-----State Machine------//
 always @(posedge i_clk)
 	begin
@@ -149,26 +141,45 @@ always @(posedge i_clk)
 					else 
 						state <= Mult;
 				Inversion: 
-						state <= Inversion1;
-				Inversion1: 
 					if (done_inv)
-						state <= Complete;
-					else 
-						state <= Inversion1;
+						state <= Complete;	
+					else state <= Inversion;
+				
 				Complete:
-						state <= Idle;
+						state <= Complete_wait;
+				Complete_wait: begin 
+					if (!start) state <= Idle; // Chờ start được gỡ
+					else state <= Complete_wait;
+					end 
+
 				default:
 					state <= Idle;
 				endcase
 			end
 	end
-	always_ff @(posedge i_clk or negedge i_rst_n) begin
-    if (!i_rst_n)
-        start_mult_delay <= 1'b0;
-    else if (state == Mult) 
-        start_mult_delay <= 1'b1; // Bật start_mult_delay sau 1 clock khi vào trạng thái Mult
-    else 
-        start_mult_delay <= 1'b0; // Reset khi không ở trạng thái Mult
+	// Tạo xung cho start_mult
+logic start_mult_pulse, start_mult_d;
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_mult_d <= 1'b0;
+        start_mult_pulse <= 1'b0;
+    end else begin
+        start_mult_d <= (state == Mult); // Lưu trạng thái trước đó của Mult
+        start_mult_pulse <= (state == Mult) & ~start_mult_d; // Xung chỉ bật khi vào trạng thái Mult
+    end
+end
+
+logic start_inv_pulse, start_inv_d;
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        start_inv_d <= 1'b0;
+        start_inv_pulse <= 1'b0;
+    end else begin
+        start_inv_d <= (state == Inversion); // Lưu trạng thái trước đó của Mult
+        start_inv_pulse <= (state == Inversion) & ~start_inv_d; // Xung chỉ bật khi vào trạng thái Mult
+    end
 end
 
 //control unit
@@ -186,7 +197,7 @@ always_comb begin
 				start_sub = CLEAR;
 				start_mult = CLEAR;
 				start_inv = CLEAR;
-				reset = CLEAR;
+				reset = CLEAR; //BD SET, chỉnh clear để có reset ở stage 1
 				done = CLEAR;
 			end
 			Add : begin
@@ -195,7 +206,7 @@ always_comb begin
 				start_mult = CLEAR;
 				start_inv = CLEAR;
 				reset = SET;
-				done = CLEAR;
+				done = CLEAR; 
 			end
 			Sub : begin
 				start_add = CLEAR;
@@ -208,7 +219,7 @@ always_comb begin
 			Mult : begin
 	start_add = CLEAR;
 	start_sub = CLEAR;
-	start_mult = start_mult_delay; // Sử dụng tín hiệu bị trễ 1 clock
+	start_mult = start_mult_pulse; // Sử dụng tín hiệu bị trễ 1 clock
 	start_inv = CLEAR;
 	reset = SET;
 	done = CLEAR;
@@ -218,26 +229,27 @@ end
 				start_add = CLEAR;
 				start_sub = CLEAR;
 				start_mult = CLEAR;
-				start_inv = SET;
+				start_inv = start_inv_pulse; // Sử dụng tín hiệu bị trễ 1 clock
 				reset = SET;
 				done = CLEAR;
 			end
-			Inversion1 : begin
-				start_add = CLEAR;
-				start_sub = CLEAR;
-				start_mult = CLEAR;
-				start_inv = CLEAR;
-				reset = SET;
-				done = CLEAR;
-			end
+		
 			Complete : begin
 				start_add = CLEAR;
 				start_sub = CLEAR;
 				start_mult = CLEAR;
 				start_inv = CLEAR;
 				reset = SET;
-				done = SET;
+				done = CLEAR;
 				end
+			Complete_wait : begin
+				start_add = CLEAR;
+				start_sub = CLEAR;
+				start_mult = CLEAR;
+				start_inv = CLEAR;
+				reset = SET; //BD SET, chỉnh clear để có reset ở stage 1
+				done = SET;
+			end
 				
 		endcase
 end

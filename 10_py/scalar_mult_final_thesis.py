@@ -62,7 +62,7 @@ def scalar_mul(n, xG, yG, zG):
 
 if __name__ == "__main__":
     # Giá trị đầu vào
-    scalar = 0x3E9F128209B8F412C2874E2F6656446BE30138B748B9E18401EE9BABC5CE923F # Thay bằng giá trị scalar mong muốn
+    scalar = 0x43F86641A085AF50C1293D806FBFC66FF4FA3EFC54F91FEBB8A87F6A379DF8CF# Thay bằng giá trị scalar mong muốn
    
 
 

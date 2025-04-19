@@ -46,6 +46,25 @@ module tb_ECC_top;
        wait(done);
        #50;
        wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       
 
       
 

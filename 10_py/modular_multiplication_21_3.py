@@ -11,9 +11,9 @@ def modular_multiplication(a_hex, b_hex, p_hex):
     return hex(result)
 
 # Ví dụ
-a_hex = "0xF7E75FDC469067FFDC439B16B7D2F0FBA2F3B5A6ABF5A7E7CE0F05EDDA3C339B"
-b_hex = "0xE5A3B45D7F29DCE6E89E3F08A7F68DAE8B771B75D7422F9A63FA9D423D51D6E9"
-p_hex = "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF43"  # Số nguyên tố lớn
+a_hex = "0xa3093da7fa407a51419601979dafe343b67c3e195b5f72c4079423b57d413c8d"
+b_hex = "0x3E9F128209B8F412C2874E2F6656446BE30138B748B9E18401EE9BABC5CE923F"
+p_hex = "0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141"  # Số nguyên tố lớn
 
 result_hex = modular_multiplication(a_hex, b_hex, p_hex)
 print("Ketqua:", result_hex)

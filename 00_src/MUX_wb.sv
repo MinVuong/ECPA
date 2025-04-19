@@ -16,8 +16,8 @@ module MUX_wb(
             end
             2'b01: begin
                 wb_data_1 = ecc_x;
-                wb_data_2 = ecc_y;
-                wb_data_3 = ecc_z;
+            //    wb_data_2 = ecc_y;
+            //    wb_data_3 = ecc_z;
             end
             2'b10: begin
                 wb_data_1 = ecpa_x;

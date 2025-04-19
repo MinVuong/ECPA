@@ -32,7 +32,7 @@ module ECC_top (
 // Logic ECC
 //    logic [255:0] ECC_top_X, ECC_top_Y, ECC_top_Z;
     logic [255:0] ecpm_X, ecpm_Y, ecpm_Z;
-    logic [255:0] ecc_out;
+   // logic [255:0] ecc_out;
     // ECPA
     logic done_ECPA;
     logic [255:0] ecpa_X, ecpa_Y, ecpa_Z;
@@ -91,28 +91,7 @@ module ECC_top (
         .done(done)
     );
 
-    // ===== Register File =====
-
-
-    regfile regfile_inst (
-        .i_clk(i_clk),
-        .i_rst_n(i_rst_n),
-        .rs1_addr(inst[19:15]), 
-        .rs2_addr(inst[24:20]),
-        .wb_addr(inst[11:7]),
-        .wb_data_1(wb_data_1), 
-        .wb_data_2(wb_data_2), 
-        .wb_data_3(wb_data_3), 
-        .ecc_control(ecc_control), 
-        .wb_wren(wb_wren), 
-        .rs1x_data(rs1x_data), 
-        .rs1y_data(rs1y_data),
-        .rs1z_data(rs1z_data),
-        .rs2x_data(rs2x_data), 
-        .rs2y_data(rs2y_data), 
-        .rs2z_data(rs2z_data)
-      
-    );
+   
 
     // ===== ECC Modules =====
 
@@ -162,10 +141,33 @@ module ECC_top (
     MUX_wb mux_wb_inst (
         .wb_sel(wb_sel),
         .ecpm_x(ecpm_X), .ecpm_y(ecpm_Y), .ecpm_z(ecpm_Z),
-        .ecc_x(ecc_out), .ecc_y(256'd0), .ecc_z(256'd0),
+        .ecc_x(ecc_X), .ecc_y(256'd0), .ecc_z(256'd0),
         .ecpa_x(ecpa_X), .ecpa_y(ecpa_Y), .ecpa_z(ecpa_Z),
         //.ecpd_x(ecpd_X), .ecpd_y(ecpd_Y), .ecpd_z(ecpd_Z),
         .wb_data_1(wb_data_1), .wb_data_2(wb_data_2), .wb_data_3(wb_data_3)
+    );
+
+     // ===== Register File =====
+
+
+    regfile regfile_inst (
+        .i_clk(i_clk),
+        .i_rst_n(i_rst_n),
+        .rs1_addr(inst[19:15]), 
+        .rs2_addr(inst[24:20]),
+        .wb_addr(inst[11:7]),
+        .wb_data_1(wb_data_1), 
+        .wb_data_2(wb_data_2), 
+        .wb_data_3(wb_data_3), 
+        .ecc_control(ecc_control), 
+        .wb_wren(wb_wren), 
+        .rs1x_data(rs1x_data), 
+        .rs1y_data(rs1y_data),
+        .rs1z_data(rs1z_data),
+        .rs2x_data(rs2x_data), 
+        .rs2y_data(rs2y_data), 
+        .rs2z_data(rs2z_data)
+      
     );
    
 

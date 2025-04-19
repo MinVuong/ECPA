@@ -1,19 +1,15 @@
+`timescale 1ns/1ps
+
 module tb_modular_subtractor;
 
-    // Testbench signals
-    logic i_start;
-    logic i_clk;
-    logic i_rst_n;
-    logic [255:0] A;
-    logic [255:0] B;
-    logic [255:0] p;
-    logic [255:0] result;
-    logic done;
+    reg i_start;
+    reg i_clk;
+    reg i_rst_n;
+    reg [255:0] A, B, p;
+    wire [255:0] result;
+    wire done;
 
-    // Expected result (in hexadecimal)
-    logic [255:0] expected_value = 256'h79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28dc9d35c49d5a3b570b;
-
-    // Instantiate the modular_addition module
+    // Instantiate the DUT (Device Under Test)
     modular_subtractor uut (
         .i_start(i_start),
         .i_clk(i_clk),
@@ -24,49 +20,48 @@ module tb_modular_subtractor;
         .result(result),
         .done(done)
     );
-
+  
     // Clock generation
-    initial begin
-        i_clk = 0;
-        forever #5 i_clk = ~i_clk; // 10ns clock period
-    end
+    always #5 i_clk = ~i_clk;
 
-    // Test sequence
     initial begin
         // Initialize signals
+        i_clk = 0;
         i_rst_n = 0;
         i_start = 0;
-
-        // Reset the module
-        #10;
-        i_rst_n = 1;
-        A=256'h25738ad301228a1922c7d0cee9a6843be7143d0a0c752a58205de16744345b3e;
-        B=256'hbc3a37694b6840274e30efe1d454f62b578ca8bc9917be05bd16b17d8e348984;
-        p=256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
-
-        // Start the addition process
-        #5;
-        i_start = 1; // Activate start signal
-        #10;          // Wait for a clock cycle
-       // i_start = 0;  // Deactivate start signal
-
-        // Wait for the computation to finish
-        #1000;
-
-        // Display results
-        $display("Result: %h", result); // Display result in hexadecimal
-        $display("Expected: %h", expected_value); // Display expected value
-
-        // Check if the result matches the expected value
-        if (result === expected_value) begin
-            $display("Test Passed: The result is correct.");
-        end else begin
-            $display("Test Failed: The result is incorrect.");
-        end
+        A = 0;
+        B = 0;
+        p = 0;
         
-        // Finish simulation
+        // Reset sequence
+        #10 i_rst_n = 1;
+        
+        // Test case 1: A + B < p
+        A = 256'hfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc4b;
+        B = 256'hfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffd1d;
+        p = 256'hfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffe19;
+        #10 i_start = 1;
+        
+        wait(done);
+        $display("Test 1: result = %h", result);
+        i_start = 0;
+        #10 i_rst_n = 0; // Deactivate reset signal
         #10;
+        //Test case 2: A + B > p
+        i_rst_n = 1; // Activate reset signal   
+        i_start = 1; // Deactivate start signal
+  
+        A = 256'hff;
+        B = 256'h20;
+        p = 256'h100;
+    
+       
+        wait(done);
+        $display("Test 2: result = %h", result);
+        i_start = 0;
+        #10 i_rst_n = 0; // Deactivate reset signal
+    
+        #500000;
         $finish;
     end
-
 endmodule

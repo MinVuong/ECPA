@@ -1,19 +1,21 @@
-module tb_ECC_core;
+`timescale 1ns/1ps
+
+module ECC_core_tb();
 
     // Inputs
-    reg start;
-    reg i_clk;
-    reg i_rst_n;
-    reg [255:0] a;
-    reg [255:0] b;
-    reg [255:0] prime;
-    reg [255:0] n;
-    reg [2:0] ecc_sel;
-
+    logic start;
+    logic i_clk;
+    logic i_rst_n;
+    logic [255:0] a;
+    logic [255:0] b;
+    logic [255:0] prime;
+    logic [255:0] n;
+    logic [2:0] ecc_sel;
+    
     // Outputs
-    wire [255:0] alu_result;
-    wire done;
-
+    logic [255:0] alu_result;
+    logic done;
+    
     // Instantiate the Unit Under Test (UUT)
     ECC_core uut (
         .start(start),
@@ -27,104 +29,113 @@ module tb_ECC_core;
         .alu_result(alu_result),
         .done(done)
     );
-
+    
     // Clock generation
     initial begin
         i_clk = 0;
-        forever #5 i_clk = ~i_clk; // 10ns clock period
+        forever #5 i_clk = ~i_clk; // 100MHz clock
     end
-
-    // Test sequence
+    
+    // Test cases
     initial begin
-        // Initialize inputs
-        i_rst_n = 0;
+        // Initialize Inputs
         start = 0;
+        i_rst_n = 0;
         a = 0;
         b = 0;
-        prime = 0;
-        n = 0;
-        ecc_sel = 3'b000;
-
-        // Apply reset
+        prime = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F; // secp256k1 prime
+        n = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141; // secp256k1 order
+        ecc_sel = 0;
+        
+        // Reset system
         #20;
         i_rst_n = 1;
-
-        // Test case 1: ADD
-        #10;
-        a = 256'h23;
-        b = 256'h19;
-        prime = 256'h7F;
-        n=256'hFF45;
-        ecc_sel = 3'b001; // ADD
-        start = 1;
-      
-
-        // Wait for the operation to complete
-        wait(done);
-      //  i_rst_n = 0;
-        start = 0;
-        $display("Test Case 1: ADD");
-        $display("a = %h, b = %h, prime = %h, result = %h", a, b, prime, alu_result);
-
-        // Test case 2: SUB
-        #10;
-        a = 256'h5A;
-        b = 256'h3C;
-        prime = 256'h7F;
-        n=256'hFF45;
-        ecc_sel = 3'b010; // SUB
-        start = 1;
-        i_rst_n = 1;
+        #20;
         
-    
-
-        // Wait for the operation to complete
-        wait(done);
-        start = 0;
-        //i_rst_n = 0;
-        $display("Test Case 2: SUB");
-        $display("a = %h, b = %h, prime = %h, result = %h", a, b, prime, alu_result);
-
-        // Test case 3: MULT
-        #10;
-        a = 256'h5;
-        b = 256'h7;
-        n=256'hFF45;
-        prime = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC5;
-        ecc_sel = 3'b011; // MULT
+        // Test case 1: Modular addition p
+        $display("Test case 1: Modular addition");
+        a = 256'h123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0;
+        b = 256'hFEDCBA9876543210FEDCBA9876543210FEDCBA9876543210FEDCBA9876543210;
+        ecc_sel = 3'b000; // Addition
         start = 1;
-        i_rst_n = 1;
         #10;
         start = 0;
-        //i_rst_n = 0;
-
-        // Wait for the operation to complete
-        wait(done);
-        $display("Test Case 3: MULT");
-        $display("a = %h, b = %h, prime = %h, result = %h", a, b, prime, alu_result);
-
-        // Test case 4: INV
-        #10;
-        a = 256'h1;
-        b = 256'h3;
-        prime = 256'h7;
-        n=256'hFF45;
-        ecc_sel = 3'b100; // INV
-        start = 1;
-        i_rst_n = 1;
-       
         
-
-        // Wait for the operation to complete
+        // Wait for operation to complete
         wait(done);
+        $display("Result: %h", alu_result);
+        #20;
+        
+        // Test case 2: Modular addition n
+        $display("Test case 2: Modular addition (n)");
+        a = 256'h123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0;
+        b = 256'hFEDCBA9876543210FEDCBA9876543210FEDCBA9876543210FEDCBA9876543210;
+        ecc_sel = 3'b001; // Subtraction
+        start = 1;
+        #10;
         start = 0;
-        //i_rst_n = 0;
-        $display("Test Case 4: INV");
-        $display("a = %h, b = %h, prime = %h, result = %h", a, b, prime, alu_result);
+        
+        wait(done);
+        $display("Result: %h", alu_result);
+        #20;
 
-        // Finish simulation
-        #100;
+        // Test case 3: Modular subtraction p
+        $display("Test case 3: Modular subtraction p");
+        a = 256'h123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0;
+        b = 256'hFEDCBA9876543210FEDCBA9876543210FEDCBA9876543210FEDCBA9876543210;
+        ecc_sel = 3'b010; // Subtraction
+        start = 1;
+        #10;
+        start = 0;
+        
+        wait(done);
+        $display("Result: %h", alu_result);
+        #20;
+        
+        // Test case 4: Modular multiplication
+        $display("Test case 4: Modular multiplication");
+        a = 256'h123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0;
+        b = 256'hFEDCBA9876543210FEDCBA9876543210FEDCBA9876543210FEDCBA9876543210;
+        ecc_sel = 3'b100; // Multiplication
+        start = 1;
+        #10;
+        start = 0;
+        
+        wait(done);
+        $display("Result: %h", alu_result);
+        #20;
+        
+        // Test case 5: Modular inversion (using prime)
+        $display("Test case 5: Modular inversion (using prime)");
+        a = 256'h123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0;
+        b = 256'h1; // Not used for inversion
+        ecc_sel = 3'b110; // Inversion with prime
+        start = 1;
+        #10;
+        start = 0;
+        
+        wait(done);
+        $display("Result: %h", alu_result);
+        #20;
+        
+        // Test case 6: Modular inversion (using n)
+        $display("Test case 6: Modular inversion (using n)");
+        a = 256'h123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0;
+        b = 256'h1; // Not used for inversion
+        ecc_sel = 3'b111; // Inversion with n (ecc_sel[0]=1)
+        start = 1;
+        #10;
+        start = 0;
+        
+        wait(done);
+        $display("Result: %h", alu_result);
+        #20;
+        
+        // End simulation
+        $display("All test cases completed");
         $finish;
     end
+    
+ 
 
 endmodule

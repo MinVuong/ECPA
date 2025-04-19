@@ -199,13 +199,14 @@ modular_multiplication mult31 (
         .p(S2),
         .ready(done_S2)
     );
-//h = U1-U22
+// H = U2-U1 
+// FIXED 
 modular_subtractor sub32(
 	.i_start(start_stage3_sub),
 	.i_clk(i_clk),
 	.i_rst_n(i_rst_n),
-	.A(U1),
-	.B(U2),
+	.A(U2),
+	.B(U1),
 	.p(p),
 	.result(H),
 	.done(done_H)
@@ -244,13 +245,13 @@ always @(posedge i_clk or negedge i_rst_n) begin
     else if (done_R)  // Tắt khi instance sub hoàn thành
         start_stage4_sub <= 0;
 end
-//R=S1-S2
+//R=S2-S1
 modular_subtractor sub40(
 	.i_start(start_stage4_sub),
 	.i_clk(i_clk),
 	.i_rst_n(i_rst_n),
-	.A(S1),
-	.B(S2),
+	.A(S2),
+	.B(S1),
 	.p(p),
 	.result(R),
 	.done(done_R)
@@ -344,8 +345,8 @@ assign start_stage5 = start_pulse_stage5;
 //-----------------------------------------------//
  logic start_stage6;
  logic done_stage6;
- logic done_twoV, done_R_SQ_ADD_G ;
- logic [255:0] twoV, R_SQ_ADD_G;
+ logic done_twoV, done_R_SQ_SUB_G, done_S1_H_cube ;
+ logic [255:0] twoV, R_SQ_SUB_G, S1_H_cube;
  //assign start_stage6 = done_stage5;
  logic start_pulse_stage6, start_d_stage6;
 
@@ -367,7 +368,7 @@ always @(posedge i_clk or negedge i_rst_n) begin
         start_stage6_add <= 0;
     else if (done_stage5)  // Bắt đầu instance sub khi stage 1 hoàn thành
         start_stage6_add <= 1;
-    else if (done_R_SQ_ADD_G)  // Tắt khi instance sub hoàn thành
+    else if (done_R_SQ_SUB_G)  // Tắt khi instance sub hoàn thành
         start_stage6_add <= 0;
 end
 
@@ -383,18 +384,30 @@ end
         .ready(done_twoV)
     );
 
-// R_SQ + G
- modular_addition add61(
+// S1.H^3
+    modular_multiplication mult62 (
+        .clk(i_clk),
+        .rst_n(i_rst_n),
+        .start(start_stage6),
+        .a(S1),
+        .b(H_cube),
+        .m(p),
+        .p(S1_H_cube),
+        .ready(done_S1_H_cube)
+    );
+
+// R_SQ - G
+ modular_subtractor sub61(
 	.i_start(start_stage6_add),
 	.i_clk(i_clk),
 	.i_rst_n(i_rst_n),
 	.A(R_SQ),
 	.B(H_cube),
 	.p(p),
-	.result(R_SQ_ADD_G),
-	.done(done_R_SQ_ADD_G)
+	.result(R_SQ_SUB_G),
+	.done(done_R_SQ_SUB_G)
 );
-  assign done_stage6 = done_twoV ;//&done_R_SQ_ADD_G; 
+  assign done_stage6 = done_twoV&done_S1_H_cube ;//&done_R_SQ_SUB_G; 
   // ban đầu để phép and 2 cái thì đúng. Nhma hq có chỉnh addition. nếu chỉnh như vầy thì có vấn đề gì thì xem lại.
 
 //-----------------------------------------------//
@@ -416,12 +429,12 @@ always @(posedge i_clk or negedge i_rst_n) begin
         start_stage7 <= 0;
 end
 
-// R_SQ + G - 2V
+// R_SQ - G - 2V
  modular_subtractor sub71(
 	.i_start(start_stage7),
 	.i_clk(i_clk),
 	.i_rst_n(i_rst_n),
-	.A(R_SQ_ADD_G),
+	.A(R_SQ_SUB_G),
 	.B(twoV),
 	.p(p),
 	.result(X3),
@@ -464,8 +477,8 @@ end
 //-----------------------------------------------//
  logic start_stage9;
 // logic done_stage9;
- //logic done_Y3 ;
- //logic [255:0] Y3;
+ logic done_Y3_temp ;
+ logic [255:0] Y3_temp;
  //assign start_stage9 = done_stage8;
  logic start_pulse_stage9, start_d_stage9;
 
@@ -489,10 +502,43 @@ assign start_stage9 = start_pulse_stage9;
         .a(R),
         .b(V_SUB_X3),
         .m(p),
-        .p(Y3),
-        .ready(done_Y3)
+        .p(Y3_temp),
+        .ready(done_Y3_temp)
     );
-  assign done_stage9= done_Y3;
+  assign done_stage9= done_Y3_temp;
+
+
+  //-----------------------------------------------//
+// Stage 10
+//-----------------------------------------------//
+logic start_stage10;
+ logic done_stage10;
+ logic done_Y3 ;
+// logic [255:0] V_SUB_X3;
+ //assign start_stage8 = done_stage7;
+
+always @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n)
+        start_stage10 <= 0;
+    else if (done_stage9)  // Bắt đầu instance sub khi stage 1 hoàn thành
+        start_stage10 <= 1;
+    else if (done_Y3)  // Tắt khi instance sub hoàn thành
+        start_stage10 <= 0;
+end
+
+// R_SQ + G - 2V
+ modular_subtractor sub100(
+	.i_start(start_stage10),
+	.i_clk(i_clk),
+	.i_rst_n(i_rst_n),
+	.A(Y3_temp),
+	.B(S1_H_cube),
+	.p(p),
+	.result(Y3),
+	.done(done_Y3)
+);
+  assign done_stage10= done_Y3;
+
   /*logic done_stage9_reg;
   always @(posedge i_clk or negedge i_rst_n) begin
     if (~i_rst_n || ~i_start) begin 
@@ -505,7 +551,7 @@ assign start_stage9 = start_pulse_stage9;
 */
 
   // Output
- assign o_done = done_stage9;
+ assign o_done = done_stage10;
 endmodule 
 
   
