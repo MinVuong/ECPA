@@ -120,7 +120,7 @@ if __name__ == "__main__":
     )
 
     # Số vô hướng (có thể thay đổi)
-    scalar_k = 0x419c7456868c26ea3cabeafa8074ce3e96cee5e78bd090ebc6bdd5b9909b52ad
+    scalar_k = 0x10f21e9cfa0ec6c040815fc526fae83ab326623ba51ab38d7ca727f90891d527
 
     # Tính phép nhân vô hướng
     result_jacobian = montgomery_ladder_jacobian(scalar_k, P_jacobian)

@@ -18,12 +18,12 @@ module ECC_top (
     logic [31:0] inst;
 //---------------------------------------------------------------
 //Logic control unit
-    logic start_ECPM, start_ECC_core, start_ECPA;
+    logic start_ECPM, start_ECC_core, start_ECPA, start_affine;
     logic [1:0] wb_sel;
     logic [2:0] ecc_sel;        
     logic en_pc_update;
     logic wb_wren;
-    logic [1:0] ecc_control;
+    logic [2:0] ecc_control;
 //---------------------------------------------------------------
 // Logic Regfile
     logic [255:0] rs1x_data, rs1y_data, rs1z_data;
@@ -43,6 +43,14 @@ module ECC_top (
 // Logic ECC_core
     logic [255:0] ecc_X;
     logic done_ECC_core;
+// Logic affine 
+    logic [255:0] affine_x, affine_y;
+    logic done_affine;
+    logic [255:0] jacobian_x, jacobian_y, jacobian_z;
+    assign jacobian_x = (ecc_control == 3'b001) ? ecpm_X : ecpa_X;
+    assign jacobian_y = (ecc_control == 3'b001) ? ecpm_Y : ecpa_Y;
+    assign jacobian_z = (ecc_control == 3'b001) ? ecpm_Z : ecpa_Y;
+
 
 
 
@@ -78,9 +86,11 @@ module ECC_top (
         .start(i_start), 
         .instruction(inst),
         .done_ECPM(done_ECPM),
+        .done_affine(done_affine),
         .done_ECC_core(done_ECC_core),
         .done_ECPA(done_ECPA),
         .start_ECPM(start_ECPM),
+        .start_affine(start_affine),
         .start_ECC_core(start_ECC_core),
         .start_ECPA(start_ECPA),
         .wb_sel(wb_sel),
@@ -136,6 +146,17 @@ module ECC_top (
         .alu_result(ecc_X),
         .done(done_ECC_core)
     );
+
+    // ===== Affine Conversion =====
+    Jacobian_to_Affine jacobian_to_affine_inst (
+        .i_clk(i_clk),
+        .i_rst_n(i_rst_n),
+        .i_start(start_affine),
+        .X_Jacobian(jacobian_x), .Y_Jacobian(jacobian_y), .Z_Jacobian(jacobian_z),
+        .p(p),
+        .X_Affine(affine_x), .Y_Affine(affine_y),
+        .o_done(done_affine)
+    );
     //Mux 4->1
 
     MUX_wb mux_wb_inst (
@@ -143,6 +164,7 @@ module ECC_top (
         .ecpm_x(ecpm_X), .ecpm_y(ecpm_Y), .ecpm_z(ecpm_Z),
         .ecc_x(ecc_X), .ecc_y(256'd0), .ecc_z(256'd0),
         .ecpa_x(ecpa_X), .ecpa_y(ecpa_Y), .ecpa_z(ecpa_Z),
+        .affine_x(affine_x), .affine_y(affine_y),
         //.ecpd_x(ecpd_X), .ecpd_y(ecpd_Y), .ecpd_z(ecpd_Z),
         .wb_data_1(wb_data_1), .wb_data_2(wb_data_2), .wb_data_3(wb_data_3)
     );

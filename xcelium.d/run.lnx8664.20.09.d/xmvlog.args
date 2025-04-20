@@ -16,6 +16,7 @@
 00_src/modular_subtractor.sv
 00_src/modular_multiplication.sv
 00_src/modular_inversion.sv
+00_src/Jacobian_to_Affine.sv
 00_src/check_bit_ecpm.sv
 00_src/ECPA.sv
 00_src/ECPD.sv

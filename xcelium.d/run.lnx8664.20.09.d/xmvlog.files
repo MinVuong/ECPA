@@ -12,6 +12,7 @@
 /home/admin/shared/ECDSA/00_src/modular_subtractor.sv
 /home/admin/shared/ECDSA/00_src/modular_multiplication.sv
 /home/admin/shared/ECDSA/00_src/modular_inversion.sv
+/home/admin/shared/ECDSA/00_src/Jacobian_to_Affine.sv
 /home/admin/shared/ECDSA/00_src/check_bit_ecpm.sv
 /home/admin/shared/ECDSA/00_src/ECPA.sv
 /home/admin/shared/ECDSA/00_src/ECPD.sv

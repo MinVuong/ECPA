@@ -24,6 +24,16 @@ module tb_ECC_top;
         i_clk = 0;
         forever #5 i_clk = ~i_clk; // 10ns clock period
     end
+    // Doan code nay de kiem tra cac signal trong module ECC_top, hienj memory trong module regfile
+    /*
+    integer i;
+    always @(uut.regfile_inst.memory) begin
+        $display("Time: %0t | Memory Contents Changed:", $time);
+        for (i = 0; i < 32; i = i + 1) begin // Assuming memory has 32 entries
+            $display("memory[%0d] = %h", i, uut.regfile_inst.memory[i]);
+        end
+    end
+    */
 
     // Test sequence
     initial begin
@@ -52,24 +62,25 @@ module tb_ECC_top;
        wait(done);
        #50;
        wait(done);
-       #50;
-       wait(done);
-       #50;
-       wait(done);
-       #50;
-       wait(done);
-       #50;
-       wait(done);
-       #50;
-       wait(done);
-       #50;
-       wait(done);
-       
+         #50;
+        wait(done);
+        #50;
 
-      
-
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+       #50;
+       wait(done);
+         #50;
+        wait(done);
+        #50;
        
-        #50000;
         $finish;
     end
 

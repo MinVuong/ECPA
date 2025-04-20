@@ -57,8 +57,8 @@ def inver(b, a, m):
 # Test the function with hardcoded hex inputs
 if __name__ == "__main__":
     # Gán cứng các giá trị đầu vào dưới dạng số hex
-    a = 0xc845b856e0b321b35f8bc66d89cc34287f80ebe5355dbcd6bf16f55f76c628bf # Multiplicand
-    b = 0xa3093da7fa407a51419601979dafe343b67c3e195b5f72c4079423b57d413c8d # Inverse of this number is calculated
+    a = 0xee0d0f5593d64613011848976e8d18bda8993ea3e20c47cf0ce74039de787bd1 # Multiplicand
+    b = 0x545e999a89efad89bf4bfe6d4021e019cda465fb28bbd36e05be5ca2f146238 # Inverse of this number is calculated
     m = 0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141  # Modulus
 
     try:

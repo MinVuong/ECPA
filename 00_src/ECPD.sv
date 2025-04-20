@@ -304,7 +304,7 @@ assign done_stage6 = done_M_and_S_sub_X3;
   logic 	     done_Y3;
 
 assign start_stage7 = done_stage6;
-always_ff @(posedge i_clk or posedge i_rst_n) begin
+always_ff @(posedge i_clk or negedge i_rst_n) begin
         if (!i_rst_n) begin
             stage7_start <= 1'b0; 
         end else if (start_stage7) begin

@@ -514,6 +514,7 @@ assign start_stage9 = start_pulse_stage9;
 logic start_stage10;
  logic done_stage10;
  logic done_Y3 ;
+  logic done_stage10_d;
 // logic [255:0] V_SUB_X3;
  //assign start_stage8 = done_stage7;
 
@@ -551,7 +552,15 @@ end
 */
 
   // Output
- assign o_done = done_stage10;
+always @(posedge i_clk or negedge i_rst_n) begin
+        if (!i_rst_n) begin
+            done_stage10_d <= 0;
+            o_done <= 0;
+        end else begin
+            done_stage10_d <= done_stage10; // Lưu trạng thái trước đó của done_stage10
+            o_done <= done_stage10 & ~done_stage10_d; // Bật o_done khi done_stage10 chuyển từ 0 -> 1
+        end
+    end
 endmodule 
 
   

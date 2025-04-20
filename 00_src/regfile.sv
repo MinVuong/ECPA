@@ -7,7 +7,7 @@ module regfile (
     input logic [255:0] wb_data_1,  // Dữ liệu ghi 1 (256 bit)
     input logic [255:0] wb_data_2,  // Dữ liệu ghi 2 (256 bit)
     input logic [255:0] wb_data_3,  // Dữ liệu ghi 3 (256 bit)
-    input logic [1:0] ecc_control,  // Tín hiệu điều khiển chế độ
+    input logic [2:0] ecc_control,  // Tín hiệu điều khiển chế độ
     input logic wb_wren,            // Tín hiệu cho phép ghi
     output logic [255:0] rs1x_data, // Dữ liệu đọc rs1x (256 bit)
     output logic [255:0] rs1y_data, // Dữ liệu đọc rs1y (256 bit)
@@ -41,30 +41,35 @@ module regfile (
         // Xử lý các trường hợp đọc dựa trên ecc_control và wb_wren
         if (!wb_wren) begin
             case (ecc_control)
-                2'b10: begin
+                3'b010: begin
                     rs1x_data = memory[rs1_addr];
                     rs2x_data = memory[rs2_addr];
                 end
-                2'b01: begin
+                3'b001: begin
                     rs1x_data = memory[rs1_addr];
 
                     rs2x_data = memory[rs2_addr];
                     rs2y_data = memory[rs2_addr + 5'd1];
                     rs2z_data = memory[rs2_addr + 5'd2];
                 end
-                2'b00: begin
+                3'b000: begin
                     rs1x_data = memory[rs1_addr];
                     rs2x_data = memory[rs2_addr];
                     rs2y_data = memory[rs2_addr + 5'd1];
                     rs2z_data = memory[rs2_addr + 5'd2];
                 end
-                2'b11: begin
+                3'b011: begin
                     rs1x_data = memory[rs1_addr];
                     rs1y_data = memory[rs1_addr + 5'd1];
                     rs1z_data = memory[rs1_addr + 5'd2];
                     rs2x_data = memory[rs2_addr];
                     rs2y_data = memory[rs2_addr + 5'd1];
                     rs2z_data = memory[rs2_addr + 5'd2];
+                end
+                3'b100: begin
+                    rs1x_data = memory[rs1_addr];
+                    rs1y_data = memory[rs1_addr + 5'd1];
+                    rs1z_data = memory[rs1_addr + 5'd2];
                 end
             endcase
         end
@@ -91,20 +96,26 @@ module regfile (
 
             // Xử lý các trường hợp ghi dựa trên ecc_control
             case (ecc_control)
-                2'b00: begin
+                3'b000: begin
                     memory[wb_addr] <= wb_data_1;
                 end
-                2'b01: begin
+                3'b001: begin
                     memory[wb_addr] <= wb_data_1;
                     memory[wb_addr + 5'd1] <= wb_data_2;
                     memory[wb_addr + 5'd2] <= wb_data_3;
                  
                 end
-                2'b10: begin
+                3'b010: begin
                     memory[wb_addr] <= wb_data_1;
                 end
-                2'b11: begin
+                3'b011: begin
                     memory[wb_addr] <= wb_data_1;
+                    memory[wb_addr + 5'd1] <= wb_data_2;
+                    memory[wb_addr + 5'd2] <= wb_data_3;
+                end
+                3'b100: begin
+                    memory[wb_addr] <= wb_data_1;
+                
                 end
             endcase
         end

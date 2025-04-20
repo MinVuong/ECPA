@@ -5,14 +5,16 @@ module control_unit (
     input [31:0] instruction,        // 32-bit instruction
     input done_ECPM,                 // ECPM completion signal
     input done_ECPA,                 // ECPA completion signal
-    input done_ECC_core,             // ECC core completion signal
+    input done_ECC_core,   
+    input done_affine,          // ECC core completion signal
     output reg start_ECPM,           // Start ECPM
     output reg start_ECPA,           // Start ECPA
-    output reg start_ECC_core,       // Start ECC core
+    output reg start_ECC_core, 
+    output reg start_affine,      // Start ECC core
     output reg [1:0] wb_sel,               // Write-back select
     output reg [2:0] ecc_sel,        // Select ECC core
     output reg en_pc_update,         // Operation done
-    output reg [1:0] ecc_control,    // ECC control signal
+    output reg [2:0] ecc_control,    // ECC control signal
 	output reg wb_wren,				 // Write-back enable
     output reg done                  // FSM completion signal
 );
@@ -33,7 +35,7 @@ module control_unit (
    // reg [4:0] rs1, rs2, rd;          // Unused in current logic, kept for completeness
    // reg [2:0] ecc_control;           // ECC control signal
     wire done_EXECUTE;               // Combinational signal for completion
-    assign done_EXECUTE = done_ECPM | done_ECC_core | done_ECPA;
+    assign done_EXECUTE = done_ECPM | done_ECC_core | done_ECPA | done_affine; // Completion signal for EXECUTE state
 
     // Assign ecc_sel to funct3
     assign ecc_sel = funct3;
@@ -63,6 +65,7 @@ module control_unit (
         start_ECPM      = 0;
         start_ECPA      = 0;
         start_ECC_core  = 0;
+        start_affine    = 0;
         next_state      = IDLE;
         done = 0 ;
         case (state)
@@ -84,7 +87,9 @@ module control_unit (
                     3'b110: ecc_control = `MODULO;    // MODULO
                     3'b001: ecc_control = `MULSCL;    // MULSCL
                     3'b100: ecc_control = `MULSCLX;   // MULSCLX
-                    3'b101: ecc_control = `ADD_SCLX;  // ADD_SCLX
+                    3'b111: ecc_control = `ADD_SCLX;  // ADD_SCLX  KD moi chinh tu 101 =-> 111
+                    3'b101: ecc_control = `AFFINE;  // ADD_SCLX  KD moi chinh tu 101 =-> 111
+
                     default: ecc_control = `MODULO;
                 endcase
                 next_state = EXECUTE;
@@ -92,11 +97,12 @@ module control_unit (
 
             EXECUTE: begin
                 case (opcode[5:3])
-                    3'b110: begin start_ECC_core = 1; ecc_control = `MODULO; end      // MODULO
-                    3'b001: begin start_ECPM     = 1; ecc_control = `MULSCL; end       // MULSCL
-                    3'b100: begin start_ECPM     = 1; ecc_control = `MULSCLX; end       // MULSCLX
+                    3'b110: begin start_ECC_core = 1; ecc_control = `MODULO;   end      // MODULO
+                    3'b001: begin start_ECPM     = 1; ecc_control = `MULSCL;   end       // MULSCL
+                    3'b100: begin start_ECPM     = 1; ecc_control = `MULSCLX;  end       // MULSCLX
                     3'b111: begin start_ECPA     = 1; ecc_control = `ADD_SCLX; end     // ADD_SCLX
-                    default: begin start_ECC_core = 1; ecc_control = `MODULO; end // Default case
+                    3'b101: begin start_affine   = 1; ecc_control = `AFFINE;   end     // AFFINE
+                    default: begin start_ECC_core = 1;ecc_control =`MODULO;    end // Default case
                 endcase
                 if (done_EXECUTE)
                     next_state = WRITE_BACK;
@@ -112,6 +118,7 @@ module control_unit (
                     3'b001: begin ecc_control = `MULSCL; wb_sel = `SEL_ECPM; end   // MULSCL
                     3'b100: begin ecc_control = `MULSCLX; wb_sel = `SEL_ECPM; end // MULSCLX
                     3'b111: begin ecc_control = `ADD_SCLX; wb_sel = `SEL_ECPA; end // ADD_SCLX
+                    3'b101: begin ecc_control = `AFFINE; wb_sel = `SEL_AFFINE; end // AFFINE
                     default: begin ecc_control = `MODULO; wb_sel = `SEL_ECC_CORE; end
                 endcase
                 next_state = DONE;
@@ -125,6 +132,7 @@ module control_unit (
                 start_ECPM      = 0;         // Default
                 start_ECPA      = 0;         // Default
                 start_ECC_core  = 0;         // Default
+                start_affine    = 0;         // Default
                 ecc_control     = `MODULO;   // Default
                 done            = 1;         // Set to 1
                 next_state      = IDLE;      // Transition to IDLE

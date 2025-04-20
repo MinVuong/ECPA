@@ -9,7 +9,7 @@ module ECPM (
     output logic o_done
 );
 
-    typedef enum logic [3:0] {IDLE, INIT,INIT_2, COMPUTE, WAIT_COMPUTE, UPDATED, PRE_DONE, DONE} state_t;
+    typedef enum logic [3:0] {IDLE, INIT,INIT_2,INIT_3, COMPUTE, WAIT_COMPUTE, UPDATED, PRE_DONE, DONE} state_t;
     state_t state;
     
     logic [255:0] X0, Y0, Z0; // R0
@@ -30,6 +30,8 @@ module ECPM (
     logic [255:0] X0_reg, Y0_reg, Z0_reg;
     logic [255:0] X1_reg, Y1_reg, Z1_reg;
     logic [8:0] bit_pos_temp;
+    logic rst_check_bit_ecpm;
+    logic found;
     
     ECPA ecpa (
         .i_clk(i_clk),
@@ -51,10 +53,13 @@ module ECPM (
         .X3(X_out_ecpd), .Y3(Y_out_ecpd), .Z3(Z_out_ecpd),
         .o_done(ecpd_done)
     );
+
     check_bit_ecpm check_bit_ecpm (
+        .clk(i_clk),
+        .rst_n(rst_check_bit_ecpm),
         .data_in(k),
         .first_one_position(bit_pos_temp),
-        .found()
+        .found(found)
     );
     
     always_ff @(posedge i_clk or negedge i_rst_n) begin
@@ -94,16 +99,24 @@ module ECPM (
             
             INIT: begin
                 if (ecpd_done) begin
+                
                     ecpd_start <= 0;
                     enable_double <= 0;
                     X1_reg <= X_out_ecpd; Y1_reg <= Y_out_ecpd; Z1_reg <= Z_out_ecpd; // R1 = 2P
                     X0_reg <= X; Y0_reg <= Y; Z0_reg <= Z; // R0 = P
-                   //  bit_pos <= bit_pos_temp   ; // Bắt đầu từ bit 254
+                    rst_check_bit_ecpm <= 0;
                     state <= INIT_2;
                 end
             end
 
             INIT_2: begin 
+                rst_check_bit_ecpm <= 1;
+                if(found) state <= INIT_3;
+                else state <= INIT_2;
+            end
+
+
+            INIT_3: begin 
                 bit_pos <= bit_pos_temp -1 ;
                 X0 <= X0_reg; Y0 <= Y0_reg; Z0 <= Z0_reg;
                 X1 <= X1_reg; Y1 <= Y1_reg; Z1 <= Z1_reg;
@@ -167,6 +180,7 @@ module ECPM (
             end
             
             DONE: begin
+            
                 o_done <= 0;
                 state <= IDLE;
             end

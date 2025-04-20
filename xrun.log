@@ -1,6 +1,6 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
 xrun: *W,FMDEF: The default file type mapping of .sv is being overwritten.
-TOOL:	xrun(64)	20.09-s001: Started on Apr 18, 2025 at 23:21:58 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Apr 20, 2025 at 14:34:17 EDT
 xrun
 	-gui
 	+xm64bit
@@ -17,6 +17,7 @@ xrun
 		00_src/modular_subtractor.sv
 		00_src/modular_multiplication.sv
 		00_src/modular_inversion.sv
+		00_src/Jacobian_to_Affine.sv
 		00_src/check_bit_ecpm.sv
 		00_src/ECPA.sv
 		00_src/ECPD.sv
@@ -40,17 +41,10 @@ xcelium>
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> database -open waves -into waves.shm -default
 Created default SHM database waves
-xcelium> probe -create -shm tb_ECC_top.uut.done tb_ECC_top.uut.done_ECC_core tb_ECC_top.uut.done_ECPA tb_ECC_top.uut.done_ECPM tb_ECC_top.uut.ecc_X tb_ECC_top.uut.ecc_control tb_ECC_top.uut.ecc_sel tb_ECC_top.uut.ecpa_X tb_ECC_top.uut.ecpa_Y tb_ECC_top.uut.ecpa_Z tb_ECC_top.uut.ecpm_X tb_ECC_top.uut.ecpm_Y tb_ECC_top.uut.ecpm_Z tb_ECC_top.uut.en_pc_update tb_ECC_top.uut.i_clk tb_ECC_top.uut.i_rst_n tb_ECC_top.uut.i_start tb_ECC_top.uut.inst tb_ECC_top.uut.n tb_ECC_top.uut.p tb_ECC_top.uut.pc tb_ECC_top.uut.pc_next tb_ECC_top.uut.rs1x_data tb_ECC_top.uut.rs1y_data tb_ECC_top.uut.rs1z_data tb_ECC_top.uut.rs2x_data tb_ECC_top.uut.rs2y_data tb_ECC_top.uut.rs2z_data tb_ECC_top.uut.start_ECC_core tb_ECC_top.uut.start_ECPA tb_ECC_top.uut.start_ECPM tb_ECC_top.uut.wb_data_1 tb_ECC_top.uut.wb_data_2 tb_ECC_top.uut.wb_data_3 tb_ECC_top.uut.wb_sel tb_ECC_top.uut.wb_wren tb_ECC_top.uut.control_inst.clk tb_ECC_top.uut.control_inst.done tb_ECC_top.uut.control_inst.done_ECC_core tb_ECC_top.uut.control_inst.done_ECPA tb_ECC_top.uut.control_inst.done_ECPM tb_ECC_top.uut.control_inst.done_EXECUTE tb_ECC_top.uut.control_inst.ecc_control tb_ECC_top.uut.control_inst.ecc_sel tb_ECC_top.uut.control_inst.en_pc_update tb_ECC_top.uut.control_inst.funct3 tb_ECC_top.uut.control_inst.instruction tb_ECC_top.uut.control_inst.next_state tb_ECC_top.uut.control_inst.opcode tb_ECC_top.uut.control_inst.rst_n tb_ECC_top.uut.control_inst.start tb_ECC_top.uut.control_inst.start_ECC_core tb_ECC_top.uut.control_inst.start_ECPA tb_ECC_top.uut.control_inst.start_ECPM tb_ECC_top.uut.control_inst.state tb_ECC_top.uut.control_inst.wb_sel tb_ECC_top.uut.control_inst.wb_wren tb_ECC_top.uut.regfile_inst.ecc_control tb_ECC_top.uut.regfile_inst.i_clk tb_ECC_top.uut.regfile_inst.i_rst_n tb_ECC_top.uut.regfile_inst.memory tb_ECC_top.uut.regfile_inst.not_reg0 tb_ECC_top.uut.regfile_inst.rs1_addr tb_ECC_top.uut.regfile_inst.rs1x_data tb_ECC_top.uut.regfile_inst.rs1y_data tb_ECC_top.uut.regfile_inst.rs1z_data tb_ECC_top.uut.regfile_inst.rs2_addr tb_ECC_top.uut.regfile_inst.rs2x_data tb_ECC_top.uut.regfile_inst.rs2y_data tb_ECC_top.uut.regfile_inst.rs2z_data tb_ECC_top.uut.regfile_inst.wb_addr tb_ECC_top.uut.regfile_inst.wb_data_1 tb_ECC_top.uut.regfile_inst.wb_data_2 tb_ECC_top.uut.regfile_inst.wb_data_3 tb_ECC_top.uut.regfile_inst.wb_wren tb_ECC_top.uut.regfile_inst.write
+xcelium> probe -create -shm tb_ECC_top.uut.affine_x tb_ECC_top.uut.affine_y tb_ECC_top.uut.done tb_ECC_top.uut.done_ECC_core tb_ECC_top.uut.done_ECPA tb_ECC_top.uut.done_ECPM tb_ECC_top.uut.done_affine tb_ECC_top.uut.ecc_X tb_ECC_top.uut.ecc_control tb_ECC_top.uut.ecc_sel tb_ECC_top.uut.ecpa_X tb_ECC_top.uut.ecpa_Y tb_ECC_top.uut.ecpa_Z tb_ECC_top.uut.ecpm_X tb_ECC_top.uut.ecpm_Y tb_ECC_top.uut.ecpm_Z tb_ECC_top.uut.en_pc_update tb_ECC_top.uut.i_clk tb_ECC_top.uut.i_rst_n tb_ECC_top.uut.i_start tb_ECC_top.uut.inst tb_ECC_top.uut.jacobian_x tb_ECC_top.uut.jacobian_y tb_ECC_top.uut.jacobian_z tb_ECC_top.uut.n tb_ECC_top.uut.p tb_ECC_top.uut.pc tb_ECC_top.uut.pc_next tb_ECC_top.uut.rs1x_data tb_ECC_top.uut.rs1y_data tb_ECC_top.uut.rs1z_data tb_ECC_top.uut.rs2x_data tb_ECC_top.uut.rs2y_data tb_ECC_top.uut.rs2z_data tb_ECC_top.uut.start_ECC_core tb_ECC_top.uut.start_ECPA tb_ECC_top.uut.start_ECPM tb_ECC_top.uut.start_affine tb_ECC_top.uut.wb_data_1 tb_ECC_top.uut.wb_data_2 tb_ECC_top.uut.wb_data_3 tb_ECC_top.uut.wb_sel tb_ECC_top.uut.wb_wren tb_ECC_top.uut.control_inst.clk tb_ECC_top.uut.control_inst.done tb_ECC_top.uut.control_inst.done_ECC_core tb_ECC_top.uut.control_inst.done_ECPA tb_ECC_top.uut.control_inst.done_ECPM tb_ECC_top.uut.control_inst.done_EXECUTE tb_ECC_top.uut.control_inst.done_affine tb_ECC_top.uut.control_inst.ecc_control tb_ECC_top.uut.control_inst.ecc_sel tb_ECC_top.uut.control_inst.en_pc_update tb_ECC_top.uut.control_inst.funct3 tb_ECC_top.uut.control_inst.instruction tb_ECC_top.uut.control_inst.next_state tb_ECC_top.uut.control_inst.opcode tb_ECC_top.uut.control_inst.rst_n tb_ECC_top.uut.control_inst.start tb_ECC_top.uut.control_inst.start_ECC_core tb_ECC_top.uut.control_inst.start_ECPA tb_ECC_top.uut.control_inst.start_ECPM tb_ECC_top.uut.control_inst.start_affine tb_ECC_top.uut.control_inst.state tb_ECC_top.uut.control_inst.wb_sel tb_ECC_top.uut.control_inst.wb_wren tb_ECC_top.uut.regfile_inst.ecc_control tb_ECC_top.uut.regfile_inst.i_clk tb_ECC_top.uut.regfile_inst.i_rst_n tb_ECC_top.uut.regfile_inst.memory tb_ECC_top.uut.regfile_inst.not_reg0 tb_ECC_top.uut.regfile_inst.rs1_addr tb_ECC_top.uut.regfile_inst.rs1x_data tb_ECC_top.uut.regfile_inst.rs1y_data tb_ECC_top.uut.regfile_inst.rs1z_data tb_ECC_top.uut.regfile_inst.rs2_addr tb_ECC_top.uut.regfile_inst.rs2x_data tb_ECC_top.uut.regfile_inst.rs2y_data tb_ECC_top.uut.regfile_inst.rs2z_data tb_ECC_top.uut.regfile_inst.wb_addr tb_ECC_top.uut.regfile_inst.wb_data_1 tb_ECC_top.uut.regfile_inst.wb_data_2 tb_ECC_top.uut.regfile_inst.wb_data_3 tb_ECC_top.uut.regfile_inst.wb_wren tb_ECC_top.uut.regfile_inst.write
 Created probe 1
 xcelium> run
-Simulation complete via $finish(1) at time 19671125 NS + 0
-./01_tb/tb_ECC_top.sv:73         $finish;
-xcelium> probe -create -shm tb_ECC_top.uut.ecc_core_inst.a tb_ECC_top.uut.ecc_core_inst.alu_result tb_ECC_top.uut.ecc_core_inst.b tb_ECC_top.uut.ecc_core_inst.busy_inv tb_ECC_top.uut.ecc_core_inst.done tb_ECC_top.uut.ecc_core_inst.done_add tb_ECC_top.uut.ecc_core_inst.done_inv tb_ECC_top.uut.ecc_core_inst.done_mult tb_ECC_top.uut.ecc_core_inst.done_sub tb_ECC_top.uut.ecc_core_inst.ecc_sel tb_ECC_top.uut.ecc_core_inst.i_clk tb_ECC_top.uut.ecc_core_inst.i_rst_n tb_ECC_top.uut.ecc_core_inst.n tb_ECC_top.uut.ecc_core_inst.p_or_n tb_ECC_top.uut.ecc_core_inst.prime tb_ECC_top.uut.ecc_core_inst.ready0_inv tb_ECC_top.uut.ecc_core_inst.reset tb_ECC_top.uut.ecc_core_inst.result_add tb_ECC_top.uut.ecc_core_inst.result_inv tb_ECC_top.uut.ecc_core_inst.result_mult tb_ECC_top.uut.ecc_core_inst.result_sub tb_ECC_top.uut.ecc_core_inst.rst_modular tb_ECC_top.uut.ecc_core_inst.start tb_ECC_top.uut.ecc_core_inst.start_add tb_ECC_top.uut.ecc_core_inst.start_inv tb_ECC_top.uut.ecc_core_inst.start_inv_d tb_ECC_top.uut.ecc_core_inst.start_inv_pulse tb_ECC_top.uut.ecc_core_inst.start_mult tb_ECC_top.uut.ecc_core_inst.start_mult_d tb_ECC_top.uut.ecc_core_inst.start_mult_delay tb_ECC_top.uut.ecc_core_inst.start_mult_pulse tb_ECC_top.uut.ecc_core_inst.start_sub tb_ECC_top.uut.ecc_core_inst.state
-Created probe 2
-xcelium> reset
-xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-Loaded snapshot worklib.tb_ECC_top:sv
-xcelium> run
-Simulation complete via $finish(1) at time 19671125 NS + 0
-./01_tb/tb_ECC_top.sv:73         $finish;
-xcelium> 
+Simulation interrupted at 275726600 NS + 0
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Apr 20, 2025 at 14:37:37 EDT  (total: 00:03:20)

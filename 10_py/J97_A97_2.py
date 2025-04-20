@@ -14,9 +14,10 @@ def jacobian_to_affine(X, Y, Z):
     return (x, y)
 
 # Ví dụ về tọa độ Jacobian
-Xj = 0x79dc91def04d4fefb45d1892cc75ad6f1d105a57c5e6a8c1a6e66aabeb76b562
-Yj = 0xf045c90493cbade96f06ee69c3651d68ee37cae4379009262cfcc7b96b63af09
-Zj = 0xe7f928b2e2a3e71d07d5e10107cb1b7c9f459b7cb02909e102ace65dde8e3e14 # Z = 1
+Xj = 0xee7731d57fb0e3300be67ef67b711111f38b90df5866d36859cb95ef97823715
+Yj = 0x6a928f83e18d362142e6e4053e86e6625cf15ea1443e6bcfc1332ac934cba2b6
+Zj = 0xcb593f4209d7afd44db336060352bbced87b9fb5a8e5aeb98b988b8416b9f7ec # Z = 1
+
 
 
 

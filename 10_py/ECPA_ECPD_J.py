@@ -25,14 +25,14 @@ def affine_to_jacobian(x_a, y_a, z=1):
 
 # Input: Jacobian coordinates for two points (example points)
 # Point 1 (X1, Y1, Z1) - Using G's Affine coordinates converted to Jacobian
-point1_x_j = int("e9cb21aec1679b6f6f2a847bf473d65d26e904335c18e4bfefd52ed5aeec36ff", 16)  # X = x
-point1_y_j = int("2b0d925eb5c54dc5cc76c0729079551031a686fcc7c350659de3dad85e56b8d0", 16)  # Y = y
-point1_z_j = int("433d230bf66fdb0046115aae771ce032b037a823612cec636107814d83907982", 16)
+point1_x_j = int("532b346dad5b7e7308f7d9ba15f9da8bc00f88430dcc07a49bca789e3146917c", 16)  # X = x
+point1_y_j = int("2d63c4b11225a17aea8fddd16dc3a2115d0798d147dbebcf48fe2e34f89f06d6", 16)  # Y = y
+point1_z_j = int("9ba71adfcae746a6fb39caf4e45c58f071dc1ea62abcd9f477f5fa7286fd083f", 16)
 
 # Point 2 (X2, Y2, Z2) - Using G's Affine coordinates converted to Jacobian
-point2_x_j = int("b86fd6b80ab0685a810a932298e80ab9e3c65c715b9c121af9f5730639d76fdc", 16)  # X = x
-point2_y_j = int("4b8c3c9f5e50232496caa9f3aa682b9091a5755977e0717e38bcd91c59d041b2", 16)  # Y = y
-point2_z_j = int("f7d03c2832df6c93871fc86c2e27ab6c02ebdee34c7529cca318dea124ca6b0b", 16)  # Z = 1 (simple case)
+point2_x_j = int("8d42f4d0b8a0b8d002f6a0234f12715ec826a4367129ac67a316bebea1ea7f1b", 16)  # X = x
+point2_y_j = int("3c71e085b46450ba48347ee1358d60e21df3ade861a51567a22a7afa8acdf7b6", 16)  # Y = y
+point2_z_j = int("54efc69cd1ba3f00de25d3a1e8e96d690980e879822cbcb3ef7614c3c197176f", 16)
 
 # Convert Jacobian to Affine for both points
 point1_x_a, point1_y_a = jacobian_to_affine(point1_x_j, point1_y_j, point1_z_j)
