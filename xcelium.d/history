@@ -647,3 +647,5 @@ s642::(20Apr2025:14:34:17):( xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist
 s643::(20Apr2025:14:51:09):( xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECC_top.sv -timescale 1ns/10ps +access+rcw )
 s644::(20Apr2025:15:09:30):( xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECC_top.sv -timescale 1ns/10ps +access+rcw )
 s645::(20Apr2025:15:10:04):( xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECC_top.sv -timescale 1ns/10ps +access+rcw )
+s646::(20Apr2025:22:46:47):( xrun +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECC_top.sv -timescale 1ns/10ps +access+rcw )
+s647::(20Apr2025:22:47:22):( xrun -gui +xm64bit -sv -vlogext .sv -f 00_src/flist.f 01_tb/tb_ECC_top.sv -timescale 1ns/10ps +access+rcw )

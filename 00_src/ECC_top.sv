@@ -46,6 +46,7 @@ module ECC_top (
 // Logic affine 
     logic [255:0] affine_x, affine_y;
     logic done_affine;
+/*
     logic [255:0] jacobian_X, jacobian_Y, jacobian_Z;
 //---------------------------------------------------------------
 always_comb begin
@@ -59,7 +60,7 @@ always_comb begin
         jacobian_Z = ecpa_Z;
     end
 end
-
+*/
 
 
 
@@ -161,7 +162,7 @@ end
         .i_clk(i_clk),
         .i_rst_n(i_rst_n),
         .i_start(start_affine),
-        .X_Jacobian(jacobian_X), .Y_Jacobian(jacobian_Y), .Z_Jacobian(jacobian_Z),
+        .X_Jacobian(rs1x_data), .Y_Jacobian(rs1y_data), .Z_Jacobian(rs1z_data),
         .p(p),
         .X_Affine(affine_x), .Y_Affine(affine_y),
         .o_done(done_affine)
