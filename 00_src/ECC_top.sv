@@ -46,10 +46,19 @@ module ECC_top (
 // Logic affine 
     logic [255:0] affine_x, affine_y;
     logic done_affine;
-    logic [255:0] jacobian_x, jacobian_y, jacobian_z;
-    assign jacobian_x = (ecc_control == 3'b001) ? ecpm_X : ecpa_X;
-    assign jacobian_y = (ecc_control == 3'b001) ? ecpm_Y : ecpa_Y;
-    assign jacobian_z = (ecc_control == 3'b001) ? ecpm_Z : ecpa_Y;
+    logic [255:0] jacobian_X, jacobian_Y, jacobian_Z;
+//---------------------------------------------------------------
+always_comb begin
+    if (ecc_sel[0]) begin 
+        jacobian_X = ecpm_X;
+        jacobian_Y = ecpm_Y;
+        jacobian_Z = ecpm_Z;
+    end else begin
+        jacobian_X = ecpa_X;
+        jacobian_Y = ecpa_Y;
+        jacobian_Z = ecpa_Z;
+    end
+end
 
 
 
@@ -152,7 +161,7 @@ module ECC_top (
         .i_clk(i_clk),
         .i_rst_n(i_rst_n),
         .i_start(start_affine),
-        .X_Jacobian(jacobian_x), .Y_Jacobian(jacobian_y), .Z_Jacobian(jacobian_z),
+        .X_Jacobian(jacobian_X), .Y_Jacobian(jacobian_Y), .Z_Jacobian(jacobian_Z),
         .p(p),
         .X_Affine(affine_x), .Y_Affine(affine_y),
         .o_done(done_affine)
