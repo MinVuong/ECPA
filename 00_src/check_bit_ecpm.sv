@@ -5,7 +5,7 @@ module check_bit_ecpm (
     output logic found
 );
 
-   logic [255:0] reg_data;
+    logic [255:0] reg_data;
 	logic [8:0]   reg_counter;
    logic         reg_shift_out;
 	logic			  shift_out;
@@ -58,7 +58,7 @@ module check_bit_ecpm (
            first_one_position <= 9'h0; // Reset counter về 0
         end
         else if (found) begin
-             first_one_position = 9'd255 - reg_counter + 9'h2 ;
+             first_one_position <= 9'd255 - reg_counter + 9'h2 ;
         end
     end
 

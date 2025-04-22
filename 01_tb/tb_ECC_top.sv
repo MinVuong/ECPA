@@ -9,12 +9,17 @@ module tb_ECC_top;
 
     // Outputs
     wire done;
+    wire [255:0] sig_r, sig_s;
+    wire verified;
 
     // Instantiate the DUT (Device Under Test)
     ECC_top uut (
         .i_clk(i_clk),
         .i_start(i_start),
         .i_rst_n(i_rst_n),
+        .sig_r(sig_r),
+        .sig_s(sig_s),
+        .verified(verified),
 
         .done(done)
     );
@@ -24,6 +29,10 @@ module tb_ECC_top;
         i_clk = 0;
         forever #5 i_clk = ~i_clk; // 10ns clock period
     end
+    initial begin
+        $monitor("Time: %0t | sig_r = %h | sig_s = %h | verified = %b", $time, sig_r, sig_s, verified);
+    end
+    
     // Doan code nay de kiem tra cac signal trong module ECC_top, hienj memory trong module regfile
     /*
     integer i;

@@ -80,9 +80,9 @@ module regfile (
         if (!i_rst_n) begin
             // Reset: gán giá trị ban đầu cho các thanh ghi
             memory[0] <= 256'd0;     // Thanh ghi 0 luôn là 0
-            memory[1] <= 256'hd7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592;     // Thanh ghi 1 = hash_m
-            memory[2] <= 256'h43F86641A085AF50C1293D806FBFC66FF4FA3EFC54F91FEBB8A87F6A379DF8CF;     // Thanh ghi 2 = k 
-            memory[3] <= 256'h3E9F128209B8F412C2874E2F6656446BE30138B748B9E18401EE9BABC5CE923F;     // Thanh ghi 3 = d 
+            memory[1] <= 256'h36AF1F408263958E69A9E4B22647594A4C502F449B3C6949A7A995309A00E917;     // Thanh ghi 1 = hash_m
+            memory[2] <= 256'h16AACD4BA074939022CB12DC92468BB0266E0687881D2BA0C18476DC2A910167;     // Thanh ghi 2 = k 
+            memory[3] <= 256'h4CD4F18D4406D717313B49FAC61F96233E4A32749E244B23B516EDD04B41015B;     // Thanh ghi 3 = d 
             memory[4] <= 256'h79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798;     // Thanh ghi 4 = Xg
             memory[5] <= 256'h483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8;     // Thanh ghi 5 = yg
             memory[6] <= 256'h1;     // Thanh ghi 6 = zg

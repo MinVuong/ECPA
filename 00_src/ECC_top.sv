@@ -3,9 +3,9 @@ module ECC_top (
     input  logic i_rst_n, 
     input  logic i_start,
 
-   // output logic verify,
-   // output logic [255:0] sig_r,
-   // output logic [255:0] sig_s,
+    output logic verified,
+    output logic [255:0] sig_r,
+    output logic [255:0] sig_s,
    output logic done
 );
     logic [255:0] p, n;
@@ -201,6 +201,30 @@ end
         .rs2z_data(rs2z_data)
       
     );
-   
+    logic [255:0] sig_r_tp;
+
+// Đọc giá trị từ thanh ghi 14 và thanh ghi 30
+always_comb begin
+    sig_r = regfile_inst.memory[14]; // Đọc giá trị từ thanh ghi 14
+    sig_s = regfile_inst.memory[17]; // Đọc giá trị từ thanh ghi 17
+    sig_r_tp = regfile_inst.memory[30];
+end
+
+// So sánh giá trị và bật tín hiệu verified
+logic sig_r_equal_sig_r_tp;
+logic sig_r_nonzero, sig_r_tp_nonzero;
+
+assign sig_r_equal_sig_r_tp = ~(sig_r ^ sig_r_tp); // Kiểm tra sig_r == sig_r_tp
+assign sig_r_nonzero = |sig_r;                     // Kiểm tra sig_r != 0
+assign sig_r_tp_nonzero = |sig_r_tp;               // Kiểm tra sig_r_tp != 0
+
+always_ff @(posedge i_clk or negedge i_rst_n) begin
+    if (!i_rst_n) begin
+        verified <= 1'b0;
+    end else begin
+        // Bật tín hiệu verified nếu sig_r == sig_r_tp và cả hai khác 0
+        verified <= sig_r_equal_sig_r_tp & sig_r_nonzero & sig_r_tp_nonzero;
+    end
+end
 
 endmodule

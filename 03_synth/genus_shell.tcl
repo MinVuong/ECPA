@@ -7,7 +7,7 @@
 ##################################################
 
 if ![info exists env(GENUSHOME)] {puts "PLEASE SET \"GENUSHOME\" VARIABLE!"; exit 1}
-set mod tb_modular_inversion 
+set mod ECC_top 
 ##################################################
 set_db library [list /opt/PDKs/skywater130/timing/sky130_fd_sc_hd__tt_025C_1v80.lib /opt/PDKs/sky130_sram_macros-dev/sky130_sram_1kbyte_1r1w_8x1024_8/sky130_sram_1kbyte_1r1w_8x1024_8_TT_1p8V_25C.lib ]
 

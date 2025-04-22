@@ -218,8 +218,8 @@ assign done_stage3 = done_M_2&done_2S&done_8T;
   logic              done_stage4;
   logic 	     done_X3;
 assign start_stage4 = done_stage3;
-always_ff @(posedge i_clk or negedge i_rst_n) begin //ban đầu pos nhma chạy quatus sai
-        if (~i_rst_n) begin
+always_ff @(posedge i_clk or posedge i_rst_n) begin
+        if (!i_rst_n) begin
             stage4_start <= 1'b0; 
         end else if (start_stage4) begin
             stage4_start <= 1'b1; 
@@ -246,8 +246,8 @@ assign done_stage4 = done_X3;
   logic [255:0]	     r_S_sub_X3;
   logic 	     done_S_sub_X3;
 assign start_stage5 = done_stage4;
-always_ff @(posedge i_clk or negedge i_rst_n) begin // ban đầu pos nhma chạy sai
-        if (~i_rst_n) begin
+always_ff @(posedge i_clk or posedge i_rst_n) begin
+        if (!i_rst_n) begin
             stage5_start <= 1'b0; // Reset the stage5_start signal
         end else if (start_stage5) begin
             stage5_start <= 1'b1; // Set stage5_start to 1 when start_stage5 is high

@@ -1,13 +1,13 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
 xrun: *W,FMDEF: The default file type mapping of .sv is being overwritten.
-TOOL:	xrun(64)	20.09-s001: Started on Apr 20, 2025 at 22:47:22 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Apr 21, 2025 at 23:17:36 EDT
 xrun
-	-gui
 	+xm64bit
 	-sv
 	-vlogext .sv
 	-f 00_src/flist.f
 		00_src/constant.sv
+		00_src/Blackcell.sv
 		00_src/GrayCell.sv
 		00_src/BrentKung.sv
 		00_src/xor16.sv
@@ -33,19 +33,163 @@ xrun
 	01_tb/tb_ECC_top.sv
 	-timescale 1ns/10ps
 	+access+rcw
+file: 00_src/constant.sv
+file: 00_src/Blackcell.sv
+	module worklib.BlackCell:sv
+		errors: 0, warnings: 0
+file: 00_src/GrayCell.sv
+	module worklib.GrayCell:sv
+		errors: 0, warnings: 0
+file: 00_src/BrentKung.sv
+	module worklib.BrentKung:sv
+		errors: 0, warnings: 0
+file: 00_src/xor16.sv
+	module worklib.xor16:sv
+		errors: 0, warnings: 0
+file: 00_src/pg16.sv
+	module worklib.pg16:sv
+		errors: 0, warnings: 0
+file: 00_src/BK256.sv
+	module worklib.BK256:sv
+		errors: 0, warnings: 0
+file: 00_src/modular_addition.sv
+	module worklib.modular_addition:sv
+		errors: 0, warnings: 0
+file: 00_src/modular_subtractor.sv
+	module worklib.modular_subtractor:sv
+		errors: 0, warnings: 0
+file: 00_src/modular_multiplication.sv
+	module worklib.modular_multiplication:sv
+		errors: 0, warnings: 0
+file: 00_src/modular_inversion.sv
+	module worklib.modular_inversion:sv
+		errors: 0, warnings: 0
+file: 00_src/Jacobian_to_Affine.sv
+	module worklib.Jacobian_to_Affine:sv
+		errors: 0, warnings: 0
+file: 00_src/check_bit_ecpm.sv
+	module worklib.check_bit_ecpm:sv
+		errors: 0, warnings: 0
+file: 00_src/ECPA.sv
+	module worklib.ECPA:sv
+		errors: 0, warnings: 0
+file: 00_src/ECPD.sv
+	module worklib.ECPD:sv
+		errors: 0, warnings: 0
+file: 00_src/ECPM.sv
+	module worklib.ECPM:sv
+		errors: 0, warnings: 0
+file: 00_src/ECC_core.sv
+	module worklib.ECC_core:sv
+		errors: 0, warnings: 0
+file: 00_src/ECC_top.sv
+	module worklib.ECC_top:sv
+		errors: 0, warnings: 0
+file: 00_src/regfile.sv
+	module worklib.regfile:sv
+		errors: 0, warnings: 0
+file: 00_src/control_unit.sv
+	module worklib.control_unit:sv
+		errors: 0, warnings: 0
+file: 00_src/pc.sv
+	module worklib.pc:sv
+		errors: 0, warnings: 0
+file: 00_src/pc_4.sv
+	module worklib.pc_4:sv
+		errors: 0, warnings: 0
+file: 00_src/IMEM.sv
+	module worklib.imem:sv
+		errors: 0, warnings: 0
+file: 00_src/MUX_wb.sv
+	module worklib.MUX_wb:sv
+		errors: 0, warnings: 0
+file: 01_tb/tb_ECC_top.sv
+	module worklib.tb_ECC_top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_ECC_top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.MUX_wb:sv <0x17cad5bd>
+			streams:   1, words:  3419
+		worklib.modular_inversion:sv <0x0d58ab6a>
+			streams:  17, words: 14570
+		worklib.modular_multiplication:sv <0x45577dd9>
+			streams:  19, words:  7939
+		worklib.Jacobian_to_Affine:sv <0x2c4002d1>
+			streams:  40, words: 12283
+		worklib.modular_inversion:sv <0x299ed935>
+			streams:  17, words: 14808
+		worklib.modular_multiplication:sv <0x4d0c5d94>
+			streams:  19, words:  8052
+		worklib.modular_subtractor:sv <0x06b12495>
+			streams:   7, words:  4908
+		worklib.modular_addition:sv <0x3613245e>
+			streams:   7, words:  4706
+		worklib.ECC_core:sv <0x5a079a8c>
+			streams:  26, words: 22527
+		worklib.check_bit_ecpm:sv <0x6f0c014b>
+			streams:  14, words:  4427
+		worklib.ECPD:sv <0x47e98ccc>
+			streams:  83, words: 26279
+		worklib.ECPM:sv <0x6c798a01>
+			streams:  43, words: 30396
+		worklib.BK256:sv <0x758becab>
+			streams:  71, words: 28400
+		worklib.pg16:sv <0x6c209284>
+			streams:   0, words:     0
+		worklib.BrentKung:sv <0x3c16aeae>
+			streams:   0, words:     0
+		worklib.BK256:sv <0x59d09d39>
+			streams:  71, words: 28589
+		worklib.modular_subtractor:sv <0x03e806bc>
+			streams:   7, words:  4790
+		worklib.modular_multiplication:sv <0x5af50f34>
+			streams:  19, words:  8175
+		worklib.ECPA:sv <0x679d6930>
+			streams: 130, words: 41975
+		worklib.control_unit:sv <0x60fac832>
+			streams:   6, words:  9134
+		worklib.imem:sv <0x67b918ec>
+			streams:   2, words:   726
+		worklib.pc_4:sv <0x1807e6b7>
+			streams:   1, words:   166
+		worklib.pc:sv <0x4e722833>
+			streams:   2, words:   565
+		worklib.ECC_top:sv <0x64d20383>
+			streams:  83, words: 24917
+		worklib.tb_ECC_top:sv <0x0351302f>
+			streams:   7, words: 12637
+		worklib.regfile:sv <0x0b159c25>
+			streams:  17, words: 25223
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:               16438      24
+		Primitives:            61472       3
+		Registers:              1688     380
+		Scalar wires:           1669       -
+		Expanded wires:        39936    9302
+		Vectored wires:          765       -
+		Always blocks:           744      74
+		Initial blocks:            5       5
+		Cont. assignments:       610      96
+		Pseudo assignments:     1995     364
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.tb_ECC_top:sv
+Loading snapshot worklib.tb_ECC_top:sv .................... Done
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-
--------------------------------------
-Relinquished control to SimVision...
-xcelium> 
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
-xcelium> database -open waves -into waves.shm -default
-Created default SHM database waves
-xcelium> probe -create -shm tb_ECC_top.uut.affine_x tb_ECC_top.uut.affine_y tb_ECC_top.uut.done tb_ECC_top.uut.done_ECC_core tb_ECC_top.uut.done_ECPA tb_ECC_top.uut.done_ECPM tb_ECC_top.uut.done_affine tb_ECC_top.uut.ecc_X tb_ECC_top.uut.ecc_control tb_ECC_top.uut.ecc_sel tb_ECC_top.uut.ecpa_X tb_ECC_top.uut.ecpa_Y tb_ECC_top.uut.ecpa_Z tb_ECC_top.uut.ecpm_X tb_ECC_top.uut.ecpm_Y tb_ECC_top.uut.ecpm_Z tb_ECC_top.uut.en_pc_update tb_ECC_top.uut.i_clk tb_ECC_top.uut.i_rst_n tb_ECC_top.uut.i_start tb_ECC_top.uut.inst tb_ECC_top.uut.n tb_ECC_top.uut.p tb_ECC_top.uut.pc tb_ECC_top.uut.pc_next tb_ECC_top.uut.rs1x_data tb_ECC_top.uut.rs1y_data tb_ECC_top.uut.rs1z_data tb_ECC_top.uut.rs2x_data tb_ECC_top.uut.rs2y_data tb_ECC_top.uut.rs2z_data tb_ECC_top.uut.start_ECC_core tb_ECC_top.uut.start_ECPA tb_ECC_top.uut.start_ECPM tb_ECC_top.uut.start_affine tb_ECC_top.uut.wb_data_1 tb_ECC_top.uut.wb_data_2 tb_ECC_top.uut.wb_data_3 tb_ECC_top.uut.wb_sel tb_ECC_top.uut.wb_wren tb_ECC_top.uut.control_inst.clk tb_ECC_top.uut.control_inst.done tb_ECC_top.uut.control_inst.done_ECC_core tb_ECC_top.uut.control_inst.done_ECPA tb_ECC_top.uut.control_inst.done_ECPM tb_ECC_top.uut.control_inst.done_EXECUTE tb_ECC_top.uut.control_inst.done_affine tb_ECC_top.uut.control_inst.ecc_control tb_ECC_top.uut.control_inst.ecc_sel tb_ECC_top.uut.control_inst.en_pc_update tb_ECC_top.uut.control_inst.funct3 tb_ECC_top.uut.control_inst.instruction tb_ECC_top.uut.control_inst.next_state tb_ECC_top.uut.control_inst.opcode tb_ECC_top.uut.control_inst.rst_n tb_ECC_top.uut.control_inst.start tb_ECC_top.uut.control_inst.start_ECC_core tb_ECC_top.uut.control_inst.start_ECPA tb_ECC_top.uut.control_inst.start_ECPM tb_ECC_top.uut.control_inst.start_affine tb_ECC_top.uut.control_inst.state tb_ECC_top.uut.control_inst.wb_sel tb_ECC_top.uut.control_inst.wb_wren tb_ECC_top.uut.regfile_inst.ecc_control tb_ECC_top.uut.regfile_inst.i_clk tb_ECC_top.uut.regfile_inst.i_rst_n tb_ECC_top.uut.regfile_inst.memory tb_ECC_top.uut.regfile_inst.not_reg0 tb_ECC_top.uut.regfile_inst.rs1_addr tb_ECC_top.uut.regfile_inst.rs1x_data tb_ECC_top.uut.regfile_inst.rs1y_data tb_ECC_top.uut.regfile_inst.rs1z_data tb_ECC_top.uut.regfile_inst.rs2_addr tb_ECC_top.uut.regfile_inst.rs2x_data tb_ECC_top.uut.regfile_inst.rs2y_data tb_ECC_top.uut.regfile_inst.rs2z_data tb_ECC_top.uut.regfile_inst.wb_addr tb_ECC_top.uut.regfile_inst.wb_data_1 tb_ECC_top.uut.regfile_inst.wb_data_2 tb_ECC_top.uut.regfile_inst.wb_data_3 tb_ECC_top.uut.regfile_inst.wb_wren tb_ECC_top.uut.regfile_inst.write
-Created probe 1
 xcelium> run
-Simulation complete via $finish(1) at time 19606795 NS + 0
-./01_tb/tb_ECC_top.sv:84         $finish;
-xcelium> ^C
+Time: 0 | sig_r = 0000000000000000000000000000000000000000000000000000000000000000 | sig_s = 0000000000000000000000000000000000000000000000000000000000000000 | verified = 0
+Time: 9773225000 | sig_r = 96ce363a61289079237ffc2e4da9f4871df817af5330bf849d54c70853248ab9 | sig_s = 0000000000000000000000000000000000000000000000000000000000000000 | verified = 0
+Time: 9781785000 | sig_r = 96ce363a61289079237ffc2e4da9f4871df817af5330bf849d54c70853248ab9 | sig_s = 4578317563e7f34d9bfbee947ac43880a66eb7093a67af2de26e0b1b1a9d4962 | verified = 0
+Time: 19606175000 | sig_r = 96ce363a61289079237ffc2e4da9f4871df817af5330bf849d54c70853248ab9 | sig_s = 4578317563e7f34d9bfbee947ac43880a66eb7093a67af2de26e0b1b1a9d4962 | verified = 1
+Simulation complete via $finish(1) at time 19606215 NS + 0
+./01_tb/tb_ECC_top.sv:93         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Apr 20, 2025 at 22:52:51 EDT  (total: 00:05:29)
+TOOL:	xrun(64)	20.09-s001: Exiting on Apr 21, 2025 at 23:18:08 EDT  (total: 00:00:32)

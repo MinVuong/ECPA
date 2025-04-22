@@ -6,7 +6,7 @@ module BrentKung(input [15:0] A, input [15:0] B, input Cin, output[15:0] S, outp
 
     
 
-  pg16 pg16(.A(A), .B(B), .pg15(r1c16),.pg14(r1c15),.pg13(r1c14),
+  pg16 ipg16(.A(A), .B(B), .pg15(r1c16),.pg14(r1c15),.pg13(r1c14),
 
         .pg12(r1c13),.pg11(r1c12),.pg10(r1c11),.pg9(r1c10),.pg8(r1c9),
 
